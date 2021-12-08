@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@700;900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-family: "Lato", sans-serif;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer > span {
+  /* unset */
+  position: unset !important;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100% !important;
+  position: relative !important;
+  height: 100% !important;
+}
+
+@tailwind utilities;
+@tailwind base;
+@layer utilities {
+  .text-gradient {
+    color: #fff;
+    background: linear-gradient(
+      271deg,
+      #a0e9ff 30%,
+      #a162e8 50%,
+      #f093b0 70%,
+      #edca85 94%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grid-reverse {
+    direction: rtl;
+  }
+}
+
+@layer base {
+  html {
+    @apply dark:bg-primaryDark;
+    @apply dark:text-gray-200;
+  }
+
+  p {
+    @apply dark:text-gray-400;
+  }
+
+  .input-gray {
+    @apply bg-[#EAEAEA];
+  }
+  /* 
+  .input-gray {
+    @apply bg-[#EAEAEA];
+  }
+
+  .bg-accent {
+    @apply bg-primary;
+  }
+
+  .text-accent {
+    @apply text-primary;
+  }
+
+  .text-p {
+    @apply text-[#777777];
+  }
+
+  .tracking-tightest {
+    @apply tracking-[-0.075];
+  } */
+}
