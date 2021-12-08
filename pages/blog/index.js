@@ -9,7 +9,7 @@ function blog({ posts }) {
   return (
     <>
       <Head>
-        <title>Blog - Neplab</title>
+        <title>Blog - Subash</title>
       </Head>
       <Layout>
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">

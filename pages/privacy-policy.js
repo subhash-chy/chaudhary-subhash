@@ -5,7 +5,7 @@ function privacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy-policy - Neplab</title>
+        <title>Privacy-policy - Subash</title>
       </Head>
       <Layout>
         <div className="mt-12 mx-5">

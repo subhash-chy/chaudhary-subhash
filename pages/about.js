@@ -8,7 +8,7 @@ function about() {
   return (
     <>
       <Head>
-        <title>About - Neplab</title>
+        <title>About - Subash</title>
       </Head>
       <Layout>
         <div className="px-5 py-12 md:py-0 bg-secondaryDark flex flex-col gap-5 items-center justify-evenly md:flex-row md:h-screen">

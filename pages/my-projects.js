@@ -5,7 +5,7 @@ function myProjects() {
   return (
     <>
       <Head>
-        <title>My-projects - Neplab</title>
+        <title>My-projects - Subash</title>
       </Head>
       <Layout>
         <div className="mt-12 mx-5">
