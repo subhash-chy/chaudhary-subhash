@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Neplab</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Subash</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Layout>
