@@ -45,7 +45,7 @@ export default function Home() {
             /> */}
             <div className="h-full justify-center items-center flex flex-col gap-x-20 gap-y-10 md:flex-row bg-secondaryDark p-10 md:p-20">
               <h1 className="text-gradient text-6xl">
-                Hi! I am Subash. A designer.
+                Hi! I am Subash. A front-end designer.
               </h1>
               <p className="text-gray-100 text-lg">
                 I am also a front-end developer with pretty good experience in
