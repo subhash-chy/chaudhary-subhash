@@ -27,26 +27,7 @@ h1 {
   height: 100% !important;
 }
 
-@tailwind utilities;
 @tailwind base;
-@layer utilities {
-  .text-gradient {
-    color: #fff;
-    background: linear-gradient(
-      271deg,
-      #a0e9ff 30%,
-      #a162e8 50%,
-      #f093b0 70%,
-      #edca85 94%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .grid-reverse {
-    direction: rtl;
-  }
-}
 
 @layer base {
   html {
@@ -61,24 +42,4 @@ h1 {
   .input-gray {
     @apply bg-[#EAEAEA];
   }
-  /* 
-  .input-gray {
-    @apply bg-[#EAEAEA];
-  }
-
-  .bg-accent {
-    @apply bg-primary;
-  }
-
-  .text-accent {
-    @apply text-primary;
-  }
-
-  .text-p {
-    @apply text-[#777777];
-  }
-
-  .tracking-tightest {
-    @apply tracking-[-0.075];
-  } */
 }

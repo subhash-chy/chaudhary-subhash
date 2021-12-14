@@ -44,7 +44,7 @@ export default function Home() {
               quality={30}
             /> */}
             <div className="h-full justify-center items-center flex flex-col gap-x-20 gap-y-10 md:flex-row bg-secondaryDark p-10 md:p-20">
-              <h1 className="text-gradient text-6xl">
+              <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700">
                 Hi! I am Subash. A front-end designer.
               </h1>
               <p className="text-gray-100 text-lg">

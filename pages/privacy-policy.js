@@ -8,7 +8,7 @@ function privacyPolicy() {
         <title>Privacy-policy - Subash</title>
       </Head>
       <Layout>
-        <div className="mt-12 mx-5">
+        <div className="mt-12 mx-5 md:mx-auto  px-5 max-w-[70ch]">
           <h1 className="text-3xl  font-bold mb-4">
             Privacy Policy for using this site
           </h1>

@@ -14,7 +14,7 @@ function about() {
         <div className="px-5 py-12 md:py-0 bg-secondaryDark flex flex-col gap-5 items-center justify-evenly md:flex-row md:h-screen">
           <div className="flex flex-col md:items-center">
             {/* bg-gradient-to-br from-[#FFB75E] to-[#ED8F03] */}
-            <h1 className="text-gradient text-6xl font-semibold mb-2">
+            <h1 className="text-6xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700">
               Hi! I am a contriver.
             </h1>
             <p className="mb-5 text-sm text-gray-300">
