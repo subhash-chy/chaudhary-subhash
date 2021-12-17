@@ -1,25 +1,17 @@
 export const timelineItems = [
   {
-    title: "First One",
+    title: "Pex Wall",
     description:
-      "Tempore ea doloremque accusamus numquam minima recusandae earum. Excepturi saepe ut quibusdam.",
+      "My first medium project was about making wallpaper app. It uses pexels API to fetch images. This app was made using Flutter.",
   },
   {
-    title: "Second One",
+    title: "Personal Site",
     description:
-      "Second tempore ea doloremque accusamus numquam minima recusandae earum. Excepturi saepe ut quibusdam.",
+      "ChaudharySubash.com.np is my personal website made by using ReactJS, TailwindCSS, and GraphCMS for content management.",
+  },
+  {
+    title: "AI Radio",
+    description:
+      "This is the simplest app built by using Flutter. This app simply shows and plays different radio stations, mainly a song.",
   },
 ];
-
-// const lines = [
-// 	{
-// 	  start: "dot1",
-// 	  end: "dot2",
-// 	  color: color,
-// 	  headSize: 0,
-// 	  strokeWidth: 2,
-// 	  curveness: 0.8,
-// 	  startAnchor: "middle",
-// 	  endAnchor: "middle",
-// 	  dashness: { animation: 0.4 },
-// 	},]
