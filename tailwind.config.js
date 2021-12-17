@@ -1,23 +1,20 @@
+const primary = require("./styles/constants");
+// console.log(primary.primary);
+
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
-      // textColor: {
-      //   primary: "#3b82f6",
-      // },
-      // backgroundColor: {
-      //   primary: "#3b82f6",
-      // },
-      // borderColor: {
-      //   primary: "#3b82f6",
-      // },
       colors: {
-        primary: "#1d4ed8",
-        primaryDark: "#1B262C",
-        secondaryDark: "#161f24",
-        // #16213E
+        primary: primary.primary,
+        primaryDark: "#141d21",
+        secondaryDark: "#11181c",
+        // #1B262C
+      },
+      boxShadow: {
+        glow: `0 0 20px ${primary.primary}`,
       },
     },
   },
