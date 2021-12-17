@@ -34,8 +34,8 @@ function myProjects() {
       <Layout>
         <div className="mt-12 mx-5">
           <div className="text-center max-w-[70ch] mx-auto mb-12">
-            <h1 className="text-3xl font-semibold mb-2">My Project Roadmap</h1>
-            <p>
+            <h1 className="text-3xl font-semibold">My Project Roadmap</h1>
+            <p className="mt-5">
               The following are the projects that I have created. The link to
               those projects are unavailable because those projects have been
               deleted from my PC and I didn't have any backup.

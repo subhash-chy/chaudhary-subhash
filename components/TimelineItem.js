@@ -31,7 +31,7 @@ function TimelineItem({ title, description, index }) {
               {index + 1}
             </p>
             <h3 className="text-primary text-3xl font-bold w-full">{title}</h3>
-            <p className="mt-5 font-normal max-w-[90%]">{description}</p>
+            <p className="mt-5 max-w-[90%]">{description}</p>
           </div>
         </div>
       </div>
