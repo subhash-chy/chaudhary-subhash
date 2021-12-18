@@ -11,11 +11,11 @@ function contact() {
         <title>Contact - Subash</title>
       </Head>
       <Layout>
-        <div className="mt-12 mx-5">
+        <div className="mt-12 mx-5 md:mx-auto max-w-[70ch]">
           {/* You can reach us via email <strong>imsuubash@gmail.com</strong> */}
-          <h1 className="text-3xl font-semibold mb-2">Contact Me</h1>
-          <div className="grid md:grid-cols-7 gap-5">
-            <div className="md:col-span-3">
+          <h1 className="text-3xl font-semibold">Contact Me</h1>
+          <div className="mt-5">
+            <div>
               <h2 className="text-lg mb-2 font-semibold">Contact via email</h2>
               <p className="mb-5">
                 <strong>Note:</strong> Before sending any email, please be clear
@@ -37,26 +37,14 @@ function contact() {
                 accent
               />
             </div>
-            <div className="md:col-span-2 p-2">
-              <div className="imageContainer rounded-lg">
+            <div className="mt-5">
+              <div className="imageContainer">
                 <Image
-                  className="image rounded-lg"
+                  className="image"
                   alt="Selfie of Mr Subash Chaudhary wearing jeans jacket at sangha."
                   src="/subash.jpg"
                   layout="fill"
                   objectPosition="right"
-                  quality={30}
-                />
-              </div>
-            </div>
-            <div className="md:col-span-2 p-2">
-              <div className="imageContainer">
-                <Image
-                  className="image rounded-lg"
-                  alt="Subash chaudhary on a shirt."
-                  src="/subashv2.jpg"
-                  layout="fill"
-                  objectFit="cover"
                   quality={30}
                 />
               </div>

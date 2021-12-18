@@ -36,7 +36,7 @@ function Footer() {
         </nav>
       )}
 
-      <div className="mb-12">
+      <div className="mb-12 mt-5">
         <h1 className="text-xl font-bold mb-5">Coming Soon!</h1>
         <p>
           Want <strong>Free</strong> blogs on this site? Just Signin and you are
@@ -46,11 +46,11 @@ function Footer() {
 
       <div className="mb-12">
         <p className="mb-5">Currently, the signup doesn't work!!</p>
-        <div className="mb-5 flex gap-x-2">
+        <div className="mb-5 flex items-center justify-center gap-x-2">
           <input
             type="text"
             placeholder="Your email"
-            className="px-4 py-2 focus:outline-none text-primaryDark"
+            className="p-2 focus:outline-none text-primaryDark"
           />
           <Button accent title="SIGN UP" />
         </div>
