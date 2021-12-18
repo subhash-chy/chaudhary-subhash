@@ -43,3 +43,15 @@ h1 {
     @apply bg-[#EAEAEA];
   }
 }
+
+/* .my-projects {
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: url(/pattern1.png);
+  opacity: 0.75;
+  background-size: 6rem;
+  background-position: center;
+} */

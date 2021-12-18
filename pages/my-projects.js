@@ -32,29 +32,31 @@ function myProjects() {
         <title>My-projects - Subash</title>
       </Head>
       <Layout>
-        <div className="mt-12 mx-5">
-          <div className="text-center max-w-[70ch] mx-auto mb-12">
-            <h1 className="text-3xl font-semibold">My Project Roadmap</h1>
-            <p className="mt-5">
-              The following are the projects that I have created. The link to
-              those projects are unavailable because those projects have been
-              deleted from my PC and I didn't have any backup.
-            </p>
-          </div>
-          {/* Creating timeline items */}
-          {timelineItems.map((item, i) => (
-            <TimelineItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              index={i}
-            />
-          ))}
+        <div className="my-projects">
+          <div className="mt-12 mx-5">
+            <div className="md:text-center max-w-[70ch] mx-auto mb-12">
+              <h1 className="text-3xl font-semibold">My Project Roadmap</h1>
+              <p className="mt-5">
+                The following are the projects that I have created. The link to
+                those projects are unavailable because those projects have been
+                deleted from my PC and I didn't have any backup.
+              </p>
+            </div>
+            {/* Creating timeline items */}
+            {timelineItems.map((item, i) => (
+              <TimelineItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                index={i}
+              />
+            ))}
 
-          {/* Creating the line between dots */}
-          {lines.map((line, i) => (
-            <Xarrow key={i} {...line} />
-          ))}
+            {/* Creating the line between dots */}
+            {lines.map((line, i) => (
+              <Xarrow key={i} {...line} />
+            ))}
+          </div>
         </div>
       </Layout>
     </>
