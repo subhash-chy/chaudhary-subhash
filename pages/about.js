@@ -3,8 +3,15 @@ import Head from "next/head";
 import Button from "../components/button/Button";
 import router from "next/router";
 import Image from "next/image";
+import { useEffect } from "react";
+import { fadeAnimation, xSlide, ySlide } from "../styles/animations";
 
 function about() {
+  useEffect(() => {
+    fadeAnimation(".fade-animation");
+    xSlide(".slide-left");
+    ySlide(".slide-bottom");
+  }, []);
   return (
     <>
       <Head>
@@ -12,23 +19,24 @@ function about() {
       </Head>
       <Layout>
         <div className="px-5 py-12 md:py-0 bg-secondaryDark flex flex-col gap-5 items-center justify-evenly md:flex-row md:h-screen">
-          <div className="flex flex-col md:items-center">
+          <div className="text-left slide-bottom">
             {/* bg-gradient-to-br from-[#FFB75E] to-[#ED8F03] */}
-            <h1 className="text-6xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700">
-              Hi! I am a contriver.
+            <h1 className="fade-animation text-6xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700">
+              Hi! I am a <span>Developer</span>.
             </h1>
-            <p className="mb-5 text-sm text-gray-300">
+            <p className="fade-animation mb-5 text-sm text-gray-300">
               Hey, I write Front-End codes, prototype a Figma design, write
               backend codes, and even write some blogs.
             </p>
-            <p className="text-gray-300 mb-2">Yes, Blogs!</p>
-            <Button
-              accent
-              title="View My Blogs"
-              onClick={() => router.push("/blog")}
-            />
+            <div className="fade-animation">
+              <Button
+                accent
+                title="View My Blogs"
+                onClick={() => router.push("/blog")}
+              />
+            </div>
           </div>
-          <div className="md:w-1/4 border-8 border-gray-300 rounded-sm">
+          <div className="slide-left md:w-1/4 border-8 border-gray-300 rounded-sm">
             <div className="imageContainer">
               <Image
                 className="image"
@@ -40,6 +48,8 @@ function about() {
                 objectFit="cover"
                 objectPosition="right"
                 quality={30}
+                // loads when page loads
+                loading="eager"
               />
             </div>
           </div>

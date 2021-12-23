@@ -3,8 +3,16 @@ import Head from "next/head";
 import Button from "../components/button/Button";
 import Image from "next/image";
 import { BsFacebook, BsInstagram, BsGithub } from "react-icons/bs";
+import { useEffect } from "react";
+import { triggerXSlide, fadeAnimation } from "../styles/animations";
 
 function contact() {
+  useEffect(() => {
+    triggerXSlide(".left");
+    triggerXSlide(".right");
+    triggerXSlide(".animateSocial");
+    fadeAnimation(".fade-animation");
+  }, []);
   return (
     <>
       <Head>
@@ -13,9 +21,9 @@ function contact() {
       <Layout>
         <div className="mt-12 mx-5 md:mx-auto max-w-[70ch]">
           {/* You can reach us via email <strong>imsuubash@gmail.com</strong> */}
-          <h1 className="text-3xl font-semibold">Contact Me</h1>
+          <h1 className="text-3xl font-semibold fade-animation">Contact Me</h1>
           <div className="mt-5">
-            <div>
+            <div className="fade-animation">
               <h2 className="text-lg mb-2 font-semibold">Contact via email</h2>
               <p className="mb-5">
                 <strong>Note:</strong> Before sending any email, please be clear
@@ -38,7 +46,7 @@ function contact() {
               />
             </div>
             <div className="mt-5">
-              <div className="imageContainer">
+              <div className="imageContainer fade-animation">
                 <Image
                   className="image"
                   alt="Selfie of Mr Subash Chaudhary wearing jeans jacket at sangha."
@@ -51,7 +59,7 @@ function contact() {
             </div>
           </div>
 
-          <div className="mt-12">
+          <div className="left mt-12">
             <h2 className="text-lg mb-2 font-semibold">Contact via phone</h2>
             <p className="mb-5">
               Due to some privacy reasons, contacting via phone is unavailable!
@@ -59,9 +67,12 @@ function contact() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-lg mb-2 font-semibold">Via social media</h2>
+            <h2 className="text-lg mb-2 font-semibold animateSocial">
+              Via social media
+            </h2>
             <div className="flex items-center gap-x-2">
               <a
+                className="animateSocial"
                 href="https://www.facebook.com/SubashTharu.0/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -70,6 +81,7 @@ function contact() {
               </a>
 
               <a
+                className="animateSocial"
                 href="https://www.instagram.com/subash.002/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -78,6 +90,7 @@ function contact() {
               </a>
 
               <a
+                className="animateSocial"
                 href="https://github.com/Suubash"
                 target="_blank"
                 rel="noopener noreferrer"

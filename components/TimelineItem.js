@@ -4,8 +4,8 @@ function TimelineItem({ title, description, index }) {
       {/* Odd */}
       {/* chng*/}
       <div
-        className={`flex items-center ${
-          index % 2 ? "justify-end mt-10" : "md:text-right"
+        className={`flex items-center mt-12 ${
+          index % 2 ? "justify-end" : "md:text-right"
         }`}
       >
         {/* {index % 2 ? console.log("2") : console.log("not 2")} */}

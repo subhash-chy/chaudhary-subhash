@@ -16,7 +16,7 @@ function Header() {
     <div className="top-0 z-50 px-5 py-2 bg-gray-100 dark:bg-secondaryDark dark:text-gray-100">
       <div className=" flex items-center justify-between ">
         <Link href="/">
-          <a className="font-bold text-xl">Subash</a>
+          <a className="font-bold text-xl">SUBASH</a>
         </Link>
 
         {/* <p className="">{router.pathname !== "/" && path}</p> */}
