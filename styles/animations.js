@@ -36,11 +36,18 @@ export const triggerXSlide = function (animationClass) {
 export const triggerYSlide = function (animationClass) {
   // const y = animationClass == ".trigger-top" ? 50 : -50;
   const y = animationClass.includes("top") ? 50 : -50;
+  const start = animationClass.includes("collides-up")
+    ? "top 100px"
+    : "50px bottom";
+  const end = animationClass.includes("collides-up")
+    ? "top top"
+    : "top bottom-=200";
+  const opacity = animationClass.includes("collides-up") ? 1 : 0;
   gsap.fromTo(
     animationClass,
     {
       y: y,
-      opacity: 0,
+      opacity: opacity,
     },
     {
       y: 0,
@@ -48,9 +55,10 @@ export const triggerYSlide = function (animationClass) {
       stagger: 0.2,
       scrollTrigger: {
         trigger: animationClass,
-        start: "50px bottom",
-        end: "top bottom-=200",
+        start: start,
+        end: end,
         scrub: 0.5,
+        // markers: true,
       },
     }
   );

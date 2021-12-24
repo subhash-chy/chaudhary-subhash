@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <>
       <Header />
-      <main className="overflow-x-hidden">{children}</main>
+      <main className="overflow-hidden">{children}</main>
       {/* overflow-x-hidden */}
       <Footer />
     </>

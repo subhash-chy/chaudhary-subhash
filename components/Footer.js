@@ -25,6 +25,9 @@ function Footer() {
     triggerXSlide(".fh-left");
     fadeAnimation(".fade-animation-scroll");
 
+    // Animating breadcrumbs
+    triggerXSlide(".breadcrumb-right");
+
     // y-direction
     triggerYSlide(".f-slide-bottom ");
     triggerYSlide(".f-slide-top");
@@ -37,20 +40,20 @@ function Footer() {
   let path = pathname ? pathname[0]?.toUpperCase() + pathname?.slice(1) : "/";
 
   return (
-    <div className=" bg-gray-100 dark:bg-secondaryDark dark:text-gray-100 z-40 mt-20 py-12 px-5 w-full flex flex-col items-center text-center">
+    <div className=" bg-gray-100 dark:bg-secondaryDark dark:text-gray-100 z-40 mt-20 py-12 px-5 w-full flex flex-col items-center text-center overflow-x-auto">
       {path === "/" ? (
         ""
       ) : (
         <nav className="w-full text-gray-500 dark:text-gray-400 text-xs">
           <ol className="flex items-center gap-x-2">
             <Link href="/">
-              <a>Home</a>
+              <a className="breadcrumb-right">Home</a>
             </Link>
             <li>
-              <BsChevronRight className="w-3 h-3" />
+              <BsChevronRight className="breadcrumb-right w-3 h-3" />
             </li>
             <li>
-              <span>{path}</span>
+              <span className="breadcrumb-right">{path}</span>
             </li>
           </ol>
         </nav>

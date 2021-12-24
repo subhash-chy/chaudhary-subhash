@@ -60,7 +60,7 @@ h1 {
 } */
 
 /* Creating featured image in home page */
-/* .featured-image {
-  background: url(/pattern1.png);
+.featured-image {
+  background: url(/star.png);
   background-repeat: space space;
-} */
+}

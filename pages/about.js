@@ -4,13 +4,20 @@ import Button from "../components/button/Button";
 import router from "next/router";
 import Image from "next/image";
 import { useEffect } from "react";
-import { fadeAnimation, xSlide, ySlide } from "../styles/animations";
+import {
+  fadeAnimation,
+  triggerYSlide,
+  xSlide,
+  ySlide,
+} from "../styles/animations";
 
 function about() {
   useEffect(() => {
     fadeAnimation(".fade-animation");
     xSlide(".slide-left");
     ySlide(".slide-bottom");
+    triggerYSlide(".journey-desc-trigger-top");
+    triggerYSlide(".journey-scroll");
   }, []);
   return (
     <>
@@ -56,39 +63,44 @@ function about() {
         </div>
 
         <div className="mt-12 mx-auto px-5 max-w-[70ch]">
-          <h1 className="text-3xl font-bold mb-2">
-            I am more than a contriver.
-          </h1>
-          <p className="mb-5">
-            Hi! My name is <b>Subash Chaudhary</b> and I am a front end web
-            developer. I mainly use React for creating the app.
-          </p>
-          <h2 className="text-lg mb-2 font-semibold">
-            How my journey started?
-          </h2>
-          <p className="mb-5">
-            It took very long time to be in the field of front end development
-            since I was learning how to code. Well, primarily, before coming to
-            programming, I was just trying to learn 3D design using Blender. But
-            you all know that, 3D design softwares take so much resources in the
-            machine, you can literally use it as a heater for your room.
-          </p>
-          <p className="mb-5">
-            Learning <b>Blender</b> was very painful and time consuming task.
-            You literally just wait 2 - 3 minutes just to render a single frame
-            if you got low end PCs.
-          </p>
-          <p className="mb-5">
-            The low end PC's couldn't run Blender smoothly. So I decided to
-            leave the Blender and started learning Mobile app development. I
-            used Flutter, a Google's UI toolkit, for making cross platform apps.
-            Well, days were running and I was happy with the Flutter but not so
-            satisfied. So I started to learn React.
-          </p>
-          <p className="mb-5">
-            After writing some react codes, I was so satisfied with the react.
-            It is so easy to learn basics of react.
-          </p>
+          <div className="journey-scroll">
+            <h1 className="text-3xl font-bold mb-2">
+              I am more than a developer.
+            </h1>
+            <p className="mb-12">
+              Hi! My name is <b>Subash Chaudhary</b> and I am a front end web
+              developer. I mainly use React for creating the app.
+            </p>
+          </div>
+          <div className="journey-desc-trigger-top overflow-hidden">
+            <h2 className="text-lg mb-2 font-semibold">
+              How my journey started?
+            </h2>
+            <p className="mb-5">
+              It took very long time to be in the field of front end development
+              since I was learning how to code. Well, primarily, before coming
+              to programming, I was just trying to learn 3D design using
+              Blender. But you all know that, 3D design softwares take so much
+              resources in the machine, you can literally use it as a heater for
+              your room.
+            </p>
+            <p className="mb-5">
+              Learning <b>Blender</b> was very painful and time consuming task.
+              You literally just wait 2 - 3 minutes just to render a single
+              frame if you got low end PCs.
+            </p>
+            <p className="mb-5">
+              The low end PC's couldn't run Blender smoothly. So I decided to
+              leave the Blender and started learning Mobile app development. I
+              used Flutter, a Google's UI toolkit, for making cross platform
+              apps. Well, days were running and I was happy with the Flutter but
+              not so satisfied. So I started to learn React.
+            </p>
+            <p className="mb-5">
+              After writing some react codes, I was so satisfied with the react.
+              It is so easy to learn basics of react.
+            </p>
+          </div>
         </div>
       </Layout>
     </>

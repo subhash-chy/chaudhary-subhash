@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 // import animations
 import { triggerXSlide, triggerYSlide } from "../styles/animations";
+// import { Bounce } from "gsap/all";
 
 export default function Home() {
   const router = useRouter();
@@ -38,6 +39,16 @@ export default function Home() {
 
     // Animating top or bottom sliding
     triggerYSlide(".slide-bottom");
+    triggerYSlide(".featured-slide-collides-up");
+
+    // Creating a bounce animation
+    gsap.fromTo(
+      ".bounce-dot",
+      {
+        y: -10,
+      },
+      { y: 10, yoyo: true, repeat: -1 }
+    );
   }, []);
 
   return (
@@ -53,16 +64,25 @@ export default function Home() {
             // style={{
             //   transform: `translateY(${offsetY * 0.55}px)`,
             // }}
-            className="w-screen h-screen "
+            className="w-screen h-screen   bg-secondaryDark"
           >
-            <div className="featured-image h-full justify-center items-center text-center flex flex-col gap-x-20 gap-y-10  bg-secondaryDark p-10 md:p-20">
-              <h1 className="max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700 intro">
-                Hi! I am Subash. A front-end developer.
-              </h1>
-              <p className="intro-desc text-lg">
-                I am also a front-end developer with pretty good experience in
-                creating an eye catching and engaging UI.
-              </p>
+            <div className="featured-image h-full justify-center items-center text-center flex flex-col gap-x-20 gap-y-10 p-10 md:p-20">
+              <div className="featured-slide-collides-up h-min flex flex-col gap-10">
+                <h1 className="max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700 intro">
+                  Hi! I am Subash. A front-end developer.
+                </h1>
+                <p className="intro-desc text-lg">
+                  I am also a front-end developer with pretty good experience in
+                  creating an eye catching and engaging UI.
+                </p>
+              </div>
+
+              <div className="hidden md:flex flex-col items-center justify-center gap-y-5">
+                <div className="h-10 w-5 border-2 rounded-full flex items-center justify-center">
+                  <div className="bounce-dot h-1 w-1 rounded-full bg-primary"></div>
+                </div>
+                <p>Scroll down slowly to see animation</p>
+              </div>
             </div>
           </div>
         </div>
