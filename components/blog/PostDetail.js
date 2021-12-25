@@ -1,5 +1,6 @@
 import moment from "moment";
 import Image from "next/image";
+import CodeHighlighter from "./CodeHighlighter";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function PostDetail({ post }) {
@@ -64,6 +65,16 @@ function PostDetail({ post }) {
             src={obj.src}
           />
         );
+      case "code-block":
+        return (
+          <div key={index} className="my-12">
+            {modifiedText.map((item, i) => (
+              // <div key={i}>{item}</div>
+              <CodeHighlighter key={i} codeString={item} />
+            ))}
+          </div>
+        );
+      // return <CodeHighlighter key={}/>;
       default:
         return modifiedText;
     }
@@ -71,7 +82,7 @@ function PostDetail({ post }) {
 
   return (
     <>
-      <div className="w-full bg-red-100 mb-5">
+      <div className="w-full mb-5">
         <div className="imageContainer">
           <Image
             className="image"

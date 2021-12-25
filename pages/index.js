@@ -77,7 +77,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="hidden md:flex flex-col items-center justify-center gap-y-5">
+              <div className="flex flex-col items-center justify-center gap-y-5">
                 <div className="h-10 w-5 border-2 rounded-full flex items-center justify-center">
                   <div className="bounce-dot h-1 w-1 rounded-full bg-primary"></div>
                 </div>

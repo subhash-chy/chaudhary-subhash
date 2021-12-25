@@ -6,6 +6,7 @@ import { getPostDetails, getPosts } from "../../services/blog";
 import Head from "next/head";
 
 function PostDetails({ post }) {
+  // console.log("Post is => ", post.content.raw.type("code-block"));
   return (
     <>
       <Head>
