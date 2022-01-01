@@ -40,7 +40,7 @@ function PostCard({ post }) {
         <Button
           onClick={() => router.push(`/blog/${post.slug}`)}
           accent
-          title="READ THIS"
+          title="READ MORE"
         />
       </div>
     </div>

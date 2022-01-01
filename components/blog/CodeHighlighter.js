@@ -30,6 +30,7 @@ function CodeHighlighter({ codeString }) {
         console.log(err);
       });
   };
+  
 
   return (
     <div className="rounded-md w-full flex flex-col items-end">

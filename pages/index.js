@@ -66,7 +66,7 @@ export default function Home() {
             // }}
             className="w-screen h-screen   bg-secondaryDark"
           >
-            <div className="featured-image h-full justify-center items-center text-center flex flex-col gap-x-20 gap-y-10 p-10 md:p-20">
+            <div className="featured-image h-full justify-center items-center text-center flex flex-col gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
               <div className="featured-slide-collides-up h-min flex flex-col gap-10">
                 <h1 className="text-glow max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700  intro">
                   Hi! I am Subash. A front-end developer.

@@ -3,7 +3,25 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  scrollbar-width: thin;
+  -ms-overflow-style: thin; /* IE and Edge */
 }
+
+::-webkit-scrollbar {
+  /* If want to hide */
+  /* display: none; */
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(67, 70, 70);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 87, 87);
+}
+
 h1 {
   font-family: "Lato", sans-serif;
 }
