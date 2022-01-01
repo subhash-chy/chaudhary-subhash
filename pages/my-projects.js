@@ -49,8 +49,8 @@ function myProjects() {
               </h1>
               <p className="mt-5 fadeAnimation">
                 The following are the projects that I have created. The link to
-                those projects are unavailable because those projects have been
-                deleted from my PC and I didn't have any backup.
+                those projects will be available soon. Thanks for visiting my
+                site.
               </p>
             </div>
             <div className="fadeAnimation">

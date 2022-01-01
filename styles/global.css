@@ -14,7 +14,6 @@ h1 {
 }
 
 .imageContainer > span {
-  /* unset */
   position: unset !important;
   width: 100%;
   height: 100%;
@@ -44,6 +43,10 @@ h1 {
   .input-gray {
     @apply bg-[#EAEAEA];
   }
+
+  .flat-link {
+    @apply text-primary;
+  }
 }
 
 /* Implementing bg pattern in my-projects page */
@@ -63,6 +66,9 @@ h1 {
 .featured-image {
   background: url(/star.png);
   background-repeat: space space;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
 }
 
 /* Code Highlighter */

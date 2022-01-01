@@ -18,7 +18,7 @@ function about() {
     ySlide(".slide-bottom");
     triggerYSlide(".journey-desc-trigger-top");
     triggerYSlide(".journey-scroll");
-  }, []);
+  });
   return (
     <>
       <Head>
@@ -43,8 +43,8 @@ function about() {
               />
             </div>
           </div>
-          <div className="slide-left md:w-1/4 border-8 border-gray-300 rounded-sm">
-            <div className="imageContainer">
+          <div className="min-w-[100%] md:min-w-min slide-left md:w-1/4 border-8 border-gray-300 rounded-sm">
+            {/* <div className="imageContainer">
               <Image
                 className="image"
                 alt="Selfie of Mr Subash Chaudhary wearing jeans jacket at sangha."
@@ -57,6 +57,19 @@ function about() {
                 quality={30}
                 // loads when page loads
                 loading="eager"
+              />
+            </div> */}
+            <div className="w-full h-full relative">
+              <Image
+                alt="subash chaudhary"
+                src="/subash.jpg"
+                width={1920}
+                height={2080}
+                priority={true}
+                layout="responsive"
+                objectFit="cover"
+                objectPosition="right"
+                quality={30}
               />
             </div>
           </div>

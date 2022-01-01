@@ -2,12 +2,9 @@ import moment from "moment";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Button from "../button/Button";
-// https://gist.github.com/adrianhajdin/2b2e8509a48229baf9bb9b53d4a31c91
 
 function PostCard({ post }) {
   const router = useRouter();
-
-  // const height = post.featuredImage.height;
 
   return (
     <div className="mb-5 bg-gray-100 dark:bg-secondaryDark">
@@ -27,7 +24,6 @@ function PostCard({ post }) {
             className="rounded-full"
             height={60}
             width={60}
-            quality={100}
             objectFit="cover"
           />
           <div>

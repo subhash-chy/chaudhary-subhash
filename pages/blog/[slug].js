@@ -6,7 +6,6 @@ import { getPostDetails, getPosts } from "../../services/blog";
 import Head from "next/head";
 
 function PostDetails({ post }) {
-  // console.log("Post is => ", post.content.raw.type("code-block"));
   return (
     <>
       <Head>
@@ -15,7 +14,7 @@ function PostDetails({ post }) {
       <Layout>
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
           {/* New Posts */}
-          <div className="md:col-span-9 md:px-5">
+          <div className="md:col-span-9 md:px-5 overflow-hidden">
             <PostDetail post={post} />
           </div>
 

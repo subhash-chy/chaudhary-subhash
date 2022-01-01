@@ -4,6 +4,25 @@ import CodeHighlighter from "./CodeHighlighter";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function PostDetail({ post }) {
+  // let mc = post.content.raw.children;
+  // let nc = mc.map((item, index) => {
+  //   // this is undefined
+  //   // console.log(item, index);
+  //   if (item.type == "paragraph") {
+  //     console.log("Childrens at 1", item.children[1], index);
+  //     item.children.map((citem, cindex) => {
+  //       console.log("CITEM", citem, cindex);
+  //       if (citem.type == "link" && citem.index == 1) {
+  //         console.log("CITEM CHILDREN", citem.children);
+  //         citem.children.map((litem, lindex) => {
+  //           console.log("Litem", litem, lindex);
+  //         });
+  //       }
+  //     });
+  //   }
+  // });
+  // console.log("NC is", nc);
+  // console.log(post.content.raw.children);
   const richTextFragments = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -20,7 +39,6 @@ function PostDetail({ post }) {
         modifiedText = <u key={index}>{text}</u>;
       }
     }
-
     switch (type) {
       case "heading-two":
         return (
@@ -48,12 +66,33 @@ function PostDetail({ post }) {
         );
       case "paragraph":
         return (
-          <p key={index} className="mb-8 text-lg">
+          <div key={index} className="mb-8 text-lg">
             {modifiedText.map((item, i) => (
-              <div key={i}>{item}</div>
+              <p key={i}>{item}</p>
             ))}
-          </p>
+          </div>
         );
+      // case "paragraph":
+      //   switch (link) {
+      //     case "link":
+      //       return 1;
+
+      //     default:
+      //       break;
+      //   }
+
+      // case "link":
+      //   return (
+      //     <div key={index} className="mb-8 text-lg">
+      //       {modifiedText.map((item, i) => (
+      //         <a key={i}>
+      //           {item},{console.log("Items are", item)}
+      //         </a>
+      //       ))}
+      //     </div>
+      //   );
+
+      // <a href="https://google.com">test link</a>;
 
       case "image":
         return (
@@ -69,12 +108,22 @@ function PostDetail({ post }) {
         return (
           <div key={index} className="my-12">
             {modifiedText.map((item, i) => (
-              // <div key={i}>{item}</div>
               <CodeHighlighter key={i} codeString={item} />
             ))}
           </div>
         );
-      // return <CodeHighlighter key={}/>;
+      //This is for links
+      // case "flat-link":
+      //   return (
+      //     <a href="https://google.com" className="text-primary">
+      //       {modifiedText.map((item, i) => (
+      //         <div key={i}>
+      //           {item}
+      //           <p>test {console.log(item, "Itemsmsmmsmsms")}</p>
+      //         </div>
+      //       ))}
+      //     </a>
+      //   );
       default:
         return modifiedText;
     }
@@ -83,21 +132,23 @@ function PostDetail({ post }) {
   return (
     <>
       <div className="w-full mb-5">
-        <div className="imageContainer">
+        <div className="w-full h-full relative">
           <Image
-            className="image"
+            className=""
             src={post.featuredImage.url}
-            // width={1920}
-            // height={1080}
-            layout="fill"
+            width={1920}
+            height={1080}
+            priority={true}
+            layout="responsive"
             objectFit="cover"
+            quality={30}
           />
         </div>
       </div>
       <div className="mb-12 flex gap-5 items-center">
         <Image
           //needs to be changed or removed the unoptimized
-          unoptimized
+          // unoptimized
           src={post.author.photo.url}
           height={50}
           width={50}

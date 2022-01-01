@@ -1,7 +1,7 @@
 import { request, gql } from "graphql-request";
 
-const graphqlAPI =
-  "https://api-ap-northeast-1.graphcms.com/v2/ckvxh19hm3h4r01z0b5udb1ao/master";
+// const token = process.env.PERSONAL_BLOG_TOKEN;
+const graphqlAPI = `https://api-ap-northeast-1.graphcms.com/v2/ckvxh19hm3h4r01z0b5udb1ao/master`;
 
 export const getPosts = async () => {
   const query = gql`

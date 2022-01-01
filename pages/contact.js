@@ -46,12 +46,26 @@ function contact() {
               />
             </div>
             <div className="mt-5">
-              <div className="imageContainer fade-animation">
+              {/* <div className="imageContainer fade-animation">
                 <Image
                   className="image"
                   alt="Selfie of Mr Subash Chaudhary wearing jeans jacket at sangha."
                   src="/subash.jpg"
                   layout="fill"
+                  objectPosition="right"
+                  quality={30}
+                />
+              </div> */}
+              <div className="w-full h-full relative">
+                <Image
+                  className=""
+                  src="/subash.jpg"
+                  alt="subash chaudhary"
+                  width={1920}
+                  height={2080}
+                  priority={true}
+                  layout="responsive"
+                  objectFit="cover"
                   objectPosition="right"
                   quality={30}
                 />

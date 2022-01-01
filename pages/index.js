@@ -55,7 +55,7 @@ export default function Home() {
     <>
       <Head>
         <title>Subash</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
@@ -68,7 +68,7 @@ export default function Home() {
           >
             <div className="featured-image h-full justify-center items-center text-center flex flex-col gap-x-20 gap-y-10 p-10 md:p-20">
               <div className="featured-slide-collides-up h-min flex flex-col gap-10">
-                <h1 className="max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700 intro">
+                <h1 className="text-glow max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700  intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
                 <p className="intro-desc text-lg">
@@ -100,7 +100,7 @@ export default function Home() {
           <div className="grid md:grid-cols-5 mx-5 gap-x-5 gap-y-2 overflow-hidden">
             <div className="trigger-left row-start-2 md:row-start-1 md:col-span-2 w-full h-full flex items-end">
               {/* Do not delete this imageContainer class */}
-              <div className="imageContainer">
+              {/* <div className="imageContainer">
                 <Image
                   className="image"
                   alt="Subash Chaudhary"
@@ -108,6 +108,21 @@ export default function Home() {
                   layout="fill"
                   objectPosition="right"
                   objectFit="cover"
+                  quality={30}
+                />
+              </div> */}
+
+              <div className="w-full h-full relative">
+                <Image
+                  className=""
+                  src="/subash.jpg"
+                  alt="subash chaudhary"
+                  width={1920}
+                  height={2080}
+                  priority={true}
+                  layout="responsive"
+                  objectFit="cover"
+                  objectPosition="right"
                   quality={30}
                 />
               </div>
