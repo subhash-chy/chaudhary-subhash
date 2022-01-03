@@ -52,7 +52,6 @@ export default blog;
 
 export async function getServerSideProps() {
   const posts = (await getPosts()) || [];
-
   return {
     props: {
       posts,

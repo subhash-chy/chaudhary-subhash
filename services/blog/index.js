@@ -18,6 +18,7 @@ export const getPosts = async () => {
               }
             }
             createdAt
+            updatedAt
             slug
             title
             metaDescription

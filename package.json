@@ -8,6 +8,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.6.2",
     "@tailwindcss/line-clamp": "^0.2.2",
+    "cross-env": "^7.0.3",
     "graphql": "^15.6.1",
     "graphql-request": "^3.5.0",
     "gsap": "^3.9.0",

@@ -8,9 +8,11 @@ function PostCategories() {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-5">Tags & Catgories</h2>
-      {categories.map((category) => (
-        <p key={category.slug}>{category.name}</p>
-      ))}
+      <div className="max-h-[400px] overflow-y-auto">
+        {categories.map((category) => (
+          <p key={category.slug}>{category.name}</p>
+        ))}
+      </div>
     </div>
   );
 }
