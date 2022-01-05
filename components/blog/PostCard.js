@@ -7,7 +7,7 @@ function PostCard({ post }) {
   const router = useRouter();
 
   return (
-    <div className="mb-5 bg-gray-100 dark:bg-secondaryDark">
+    <div className="mb-5 bg-secondaryDark">
       <Image
         src={post.featuredImage.url}
         height={1080}
@@ -27,7 +27,7 @@ function PostCard({ post }) {
             objectFit="cover"
           />
           <div>
-            <p className="font-bold dark:text-gray-300">{post.author.author}</p>
+            <p className=" text-gray-100">{post.author.author}</p>
             <p className="text-sm">
               {moment(post.createdAt).format("DD MMM, YYYY")}
             </p>

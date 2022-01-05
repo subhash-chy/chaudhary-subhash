@@ -28,8 +28,8 @@ const FeaturedPosts = ({ categories, slug }) => {
         : relatedPosts
             .map((post, index) => (
               <Link key={index} href={`/blog/${post.slug}`}>
-                <a className="">
-                  <div className="flex gap-x-2 items-center justify-items-start border-b py-3 hover:bg-gray-100 dark:hover:bg-secondaryDark">
+                <a>
+                  <div className="flex gap-x-2 items-center justify-items-start border-b py-3 hover:bgs-secondaryDark group">
                     <div className="flex-shrink-0 w-16 h-16">
                       <Image
                         className="rounded-sm"
@@ -42,8 +42,10 @@ const FeaturedPosts = ({ categories, slug }) => {
                         //   objectPosition="right"
                       />
                     </div>
-                    <div className="">
-                      <p className="text-sm line-clamp-2">{post.title}</p>
+                    <div>
+                      <p className="text-sm line-clamp-2 group-hover:text-gray-300">
+                        {post.title}
+                      </p>
                     </div>
                   </div>
                 </a>

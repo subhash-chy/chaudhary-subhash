@@ -40,11 +40,11 @@ function Footer() {
   let path = pathname ? pathname[0]?.toUpperCase() + pathname?.slice(1) : "/";
 
   return (
-    <div className=" bg-gray-100 dark:bg-secondaryDark dark:text-gray-100 z-40 mt-20 py-12 px-5 w-full flex flex-col items-center text-center overflow-x-auto">
+    <div className=" bg-secondaryDark text-gray-100 z-40 mt-20 py-12 px-5 w-full flex flex-col items-center text-center overflow-x-auto">
       {path === "/" ? (
         ""
       ) : (
-        <nav className="w-full text-gray-500 dark:text-gray-400 text-xs">
+        <nav className="w-full text-gray-400 text-xs">
           <ol className="flex items-center gap-x-2">
             <Link href="/">
               <a className="breadcrumb-right">Home</a>
@@ -87,7 +87,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsFacebook className="w-6 h-6 cursor-pointer hover:text-[#4267B2]" />
+          <BsFacebook className="w-6 h-6 cursor-pointer duration-150 hover:text-[#4267B2]" />
         </a>
 
         <a
@@ -96,7 +96,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsInstagram className="w-6 h-6 cursor-pointer hover:text-[#cd486b]" />
+          <BsInstagram className="w-6 h-6 cursor-pointer duration-150 hover:text-[#cd486b]" />
         </a>
 
         <a
@@ -105,7 +105,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsGithub className="w-6 h-6 cursor-pointer hover:text-[#333333]" />
+          <BsGithub className="w-6 h-6 cursor-pointer duration-150 hover:text-[#333333]" />
         </a>
       </div>
 
@@ -123,7 +123,7 @@ function Footer() {
         ))}
       </div>
 
-      <div className="text-sm text-gray-500 fade-animation-scroll">
+      <div className="text-sm text-gray-300 fade-animation-scroll">
         <p>© Copyright 2021 Subash. All rights reserved.</p>
         <li>
           <Link href="/privacy-policy" className="cursor-pointer">

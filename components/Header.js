@@ -1,30 +1,45 @@
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { navLinks } from "./navigation-links/navlinks";
-// import { useRouter } from "next/router";
+import gsap from "gsap";
 
 function Header() {
-  // const router = useRouter();
-  // let link = router.pathname;
-  // const pathname = link.substring(1);
-  // let path = pathname ? pathname[0]?.toUpperCase() + pathname?.slice(1) : "/";
+  const navRef = useRef();
 
   const [showMenu, setShowMenu] = useState(true);
+  function toggleNav() {
+    if (navRef.current.classList.contains("hidden")) {
+      navRef.current.classList.remove("hidden");
+      navRef.current.classList.add("flex");
+    } else {
+      navRef.current.classList.remove("flex");
+      navRef.current.classList.add("hidden");
+    }
+    gsap.from(".slide-nav", {
+      y: -600,
+      opacity: 0,
+      height: 0,
+    });
+    setShowMenu(!showMenu);
+  }
 
   return (
-    <div className="top-0 z-50 px-5 py-2 bg-gray-100 dark:bg-secondaryDark dark:text-gray-100">
-      <div className=" flex items-center justify-between ">
+    <div className="px-5 py-2 md:flex items-center justify-between bg-secondaryDark text-gray-100">
+      <div className=" z-50 flex items-center justify-between opacity-100">
         <Link href="/">
           <a className="font-bold text-xl">SUBASH</a>
         </Link>
 
         {/* <p className="">{router.pathname !== "/" && path}</p> */}
 
-        <div className="flex items-center gap-x-2">
+        <div className="md:hidden flex items-center gap-x-2">
           <h2>Menu</h2>
           <div
-            onClick={() => setShowMenu(!showMenu)}
+            // onClick={() => setShowMenu(!showMenu)}
+            onClick={() => {
+              toggleNav();
+            }}
             className="cursor-pointer"
           >
             {showMenu ? (
@@ -36,17 +51,20 @@ function Header() {
         </div>
       </div>
 
-      {!showMenu && (
-        <div className="text-center flex flex-col sm:flex-row gap-3 justify-end">
-          {navLinks.map((navLink) => (
-            <Link key={navLink.name} href={navLink.path}>
-              <p className="py-3 sm:py-0 font-bold sm:font-normal w-full sm:w-max cursor-pointer duration-150 hover:bg-gray-200 sm:hover:bg-transparent sm:hover:scale-105">
-                {navLink.name}
-              </p>
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* {!showMenu && ( */}
+      <div
+        ref={navRef}
+        className="slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-3 justify-end"
+      >
+        {navLinks.map((navLink) => (
+          <Link key={navLink.name} href={navLink.path}>
+            <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 md:hover:bg-transparent hover:text-gray-200">
+              {navLink.name}
+            </p>
+          </Link>
+        ))}
+      </div>
+      {/* )} */}
     </div>
   );
 }

@@ -108,7 +108,7 @@ function privacyPolicy() {
               We use the information we collect in various ways, including to:
             </p>
 
-            <ul className="mb-5 dark:text-gray-400 ">
+            <ul className="mb-5 text-gray-400 ">
               <li>Provide, operate, and maintain our website.</li>
               <li>Improve, personalize, and expand our website.</li>
               <li>Understand and analyze how you use our website.</li>
@@ -244,30 +244,30 @@ function privacyPolicy() {
               protection rights. Every user is entitled to the following:
             </p>
             <p className="mb-5 ">
-              The right to access – You have the right to request copies of your
+              The right to access - You have the right to request copies of your
               personal data. We may charge you a small fee for this service.
             </p>
             <p className="mb-5 ">
-              The right to rectification – You have the right to request that we
+              The right to rectification - You have the right to request that we
               correct any information you believe is inaccurate. You also have
               the right to request that we complete the information you believe
               is incomplete.
             </p>
             <p className="mb-5 ">
-              The right to erasure – You have the right to request that we erase
+              The right to erasure - You have the right to request that we erase
               your personal data, under certain conditions.
             </p>
             <p className="mb-5 ">
-              The right to restrict processing – You have the right to request
+              The right to restrict processing - You have the right to request
               that we restrict the processing of your personal data, under
               certain conditions.
             </p>
             <p className="mb-5 ">
-              The right to object to processing – You have the right to object
+              The right to object to processing - You have the right to object
               to our processing of your personal data, under certain conditions.
             </p>
             <p className="mb-5 ">
-              The right to data portability – You have the right to request that
+              The right to data portability - You have the right to request that
               we transfer the data that we have collected to another
               organization, or directly to you, under certain conditions.
             </p>

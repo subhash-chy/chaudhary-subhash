@@ -11,20 +11,10 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 // import animations
 import { triggerXSlide, triggerYSlide } from "../styles/animations";
-// import { Bounce } from "gsap/all";
 
 export default function Home() {
   const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
-
-  // const [offsetY, setOffsetY] = useState(0);
-  // const handleScroll = () => setOffsetY(window.scrollY);
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   useEffect(() => {
     gsap.from(".intro", { opacity: 0, y: -200 });
@@ -103,19 +93,6 @@ export default function Home() {
 
           <div className="grid md:grid-cols-5 mx-5 gap-x-5 gap-y-2 overflow-hidden">
             <div className="trigger-left row-start-2 md:row-start-1 md:col-span-2 w-full h-full flex items-end">
-              {/* Do not delete this imageContainer class */}
-              {/* <div className="imageContainer">
-                <Image
-                  className="image"
-                  alt="Subash Chaudhary"
-                  src="/subash.jpg"
-                  layout="fill"
-                  objectPosition="right"
-                  objectFit="cover"
-                  quality={30}
-                />
-              </div> */}
-
               <div className="w-full h-full relative">
                 <Image
                   className=""
@@ -131,7 +108,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="animate-description dark:bg-secondaryDark bg-gray-100 md:col-span-3 p-10">
+            <div className="animate-description bg-secondaryDark md:col-span-3 p-10">
               <h1 className="text-3xl font-semibold mb-2">
                 Front End Developer.
               </h1>
