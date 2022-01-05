@@ -1,28 +1,8 @@
 import moment from "moment";
 import Image from "next/image";
 import CodeHighlighter from "./CodeHighlighter";
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function PostDetail({ post }) {
-  // let mc = post.content.raw.children;
-  // let nc = mc.map((item, index) => {
-  //   // this is undefined
-  //   // console.log(item, index);
-  //   if (item.type == "paragraph") {
-  //     console.log("Childrens at 1", item.children[1], index);
-  //     item.children.map((citem, cindex) => {
-  //       console.log("CITEM", citem, cindex);
-  //       if (citem.type == "link" && citem.index == 1) {
-  //         console.log("CITEM CHILDREN", citem.children);
-  //         citem.children.map((litem, lindex) => {
-  //           console.log("Litem", litem, lindex);
-  //         });
-  //       }
-  //     });
-  //   }
-  // });
-  // console.log("NC is", nc);
-  // console.log(post.content.raw.children);
   const richTextFragments = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -72,27 +52,6 @@ function PostDetail({ post }) {
             ))}
           </div>
         );
-      // case "paragraph":
-      //   switch (link) {
-      //     case "link":
-      //       return 1;
-
-      //     default:
-      //       break;
-      //   }
-
-      // case "link":
-      //   return (
-      //     <div key={index} className="mb-8 text-lg">
-      //       {modifiedText.map((item, i) => (
-      //         <a key={i}>
-      //           {item},{console.log("Items are", item)}
-      //         </a>
-      //       ))}
-      //     </div>
-      //   );
-
-      // <a href="https://google.com">test link</a>;
 
       case "image":
         return (
@@ -112,18 +71,7 @@ function PostDetail({ post }) {
             ))}
           </div>
         );
-      //This is for links
-      // case "flat-link":
-      //   return (
-      //     <a href="https://google.com" className="text-primary">
-      //       {modifiedText.map((item, i) => (
-      //         <div key={i}>
-      //           {item}
-      //           <p>test {console.log(item, "Itemsmsmmsmsms")}</p>
-      //         </div>
-      //       ))}
-      //     </a>
-      //   );
+
       default:
         return modifiedText;
     }
@@ -168,7 +116,6 @@ function PostDetail({ post }) {
 
         return richTextFragments(index, children, typeObj, typeObj.type);
       })}
-      {/* {documentToReactComponents(post.content.raw.children)} */}
     </>
   );
 }

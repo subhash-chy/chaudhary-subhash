@@ -25,8 +25,8 @@ function Header() {
   }
 
   return (
-    <div className="px-5 py-2 md:flex items-center justify-between bg-secondaryDark text-gray-100">
-      <div className=" z-50 flex items-center justify-between opacity-100">
+    <div className="z-50 backdrop-blur-md sticky top-0 max-h-min px-5 py-2 md:flex items-center justify-between bg-secondaryDark/90 text-gray-100">
+      <div className="max-h-min flex items-center justify-between opacity-100">
         <Link href="/">
           <a className="font-bold text-xl">SUBASH</a>
         </Link>
@@ -54,11 +54,11 @@ function Header() {
       {/* {!showMenu && ( */}
       <div
         ref={navRef}
-        className="slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-3 justify-end"
+        className="max-h-min slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-3 justify-end"
       >
         {navLinks.map((navLink) => (
           <Link key={navLink.name} href={navLink.path}>
-            <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 md:hover:bg-transparent hover:text-gray-200">
+            <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 hover:text-gray-200">
               {navLink.name}
             </p>
           </Link>

@@ -1,16 +1,21 @@
 const primary = require("./styles/constants");
+const primaryDark = require("./styles/constants");
+const secondaryDark = require("./styles/constants");
 // console.log(primary.primary);
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         primary: primary.primary,
-        primaryDark: "#141d21",
-        secondaryDark: "#11181c",
+        primaryDark: primaryDark.primaryDark,
+        secondaryDark: secondaryDark.secondaryDark,
         // #1B262C
       },
       boxShadow: {

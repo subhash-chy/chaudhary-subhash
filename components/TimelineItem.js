@@ -18,7 +18,7 @@ function TimelineItem({ title, description, index }) {
           <div
             // chng
             id={`${index + 1}`}
-            className="shadow-glow bg-primary  rounded-full w-8 h-8  min-w-[2rem]"
+            className="shadow-glow  bg-primary  rounded-full w-8 h-8  min-w-[2rem]"
           ></div>
           {/* chng */}
           <div
