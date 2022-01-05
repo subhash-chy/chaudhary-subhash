@@ -57,7 +57,7 @@ export default function Home() {
         <title>Subash</title>
         <meta
           name="google-site-verification"
-          content={`${process.env.GOOGLE_SITE_VERIFICATION_CONTENT}`}
+          content=" V8plfmHs6tIBpKivorNTMKn-zQH6sknk8LdwAqsjjDU"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
