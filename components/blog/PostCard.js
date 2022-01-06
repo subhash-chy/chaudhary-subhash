@@ -8,15 +8,19 @@ function PostCard({ post }) {
 
   return (
     <div className="mb-5 bg-secondaryDark">
-      <Image
-        src={post.featuredImage.url}
-        height={1080}
-        width={1920}
-        layout="responsive"
-        objectFit="cover"
-        quality={30}
-        priority={true}
-      />
+      {post.featuredImage?.url != null ? (
+        <Image
+          src={post.featuredImage.url}
+          height={1080}
+          width={1920}
+          layout="responsive"
+          objectFit="cover"
+          quality={30}
+          priority={true}
+        />
+      ) : (
+        "hello"
+      )}
       <div className=" mt-5 p-4">
         <div className="flex gap-x-2 items-center mb-5">
           <Image

@@ -1,21 +1,19 @@
 import Layout from "../components/Layout";
 import Head from "next/head";
-import {
-  fadeAnimation,
-  triggerXSlide,
-  triggerYSlide,
-} from "../styles/animations";
-import { useLayoutEffect, useEffect } from "react";
+import { fadeAnimation, triggerYSlide } from "../styles/animations";
+import { useLayoutEffect } from "react";
 
 function privacyPolicy() {
   useLayoutEffect(() => {
     fadeAnimation(".fade-privacy");
-    fadeAnimation(".fade-consent");
-    triggerXSlide(".left");
-    triggerXSlide(".right");
+    // fadeAnimation(".fade-consent");
+    // triggerXSlide(".left");
+    // triggerXSlide(".right");
 
     // information we collect section
     triggerYSlide(".slide-top-collect");
+    triggerYSlide(".slide-top-infowcp1");
+    triggerYSlide(".slide-top-infowcp2");
     // log files slide
     triggerYSlide(".slide-top-log");
     // cookies and web beacons section
@@ -86,13 +84,13 @@ function privacyPolicy() {
               reasons why you are asked to provide it, will be made clear to you
               at the point we ask you to provide your personal information.
             </p>
-            <p className="left mb-5 ">
+            <p className="mb-5 slide-top-infowcp1 ">
               If you contact us directly, we may receive additional information
               about you such as your name, email address, phone number, the
               contents of the message and/or attachments you may send us, and
               any other information you may choose to provide.
             </p>
-            <p className="right mb-5 ">
+            <p className="mb-5 slide-top-infowcp2">
               When you register for an Account, we may ask for your contact
               information, including items such as name, company name, address,
               email address, and telephone number.

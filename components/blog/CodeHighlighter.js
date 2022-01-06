@@ -34,7 +34,7 @@ function CodeHighlighter({ codeString }) {
   return (
     <div className="bg-secondaryDark rounded-md w-full flex flex-col items-end">
       <button
-        className="z-10 my-2 px-4 py-2 bg-primary  shadow-2xl shadow-primary/50 rounded-sm"
+        className="z-10 my-2 px-4 py-2 bg-primary text-black  shadow-2xl shadow-primary/50 rounded-sm"
         onClick={handleCopyClick}
       >
         {isCopied ? "Copied!!" : "Copy"}

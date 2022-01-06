@@ -28,7 +28,7 @@ function about() {
         <div className="px-5 py-12 md:py-0 bg-secondaryDark flex flex-col gap-5 items-center justify-evenly md:flex-row md:h-screen">
           <div className="text-left slide-bottom">
             {/* bg-gradient-to-br from-[#FFB75E] to-[#ED8F03] */}
-            <h1 className="fade-animation text-6xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700">
+            <h1 className="fade-animation text-6xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
               Hi! I am a <span>Developer</span>.
             </h1>
             <p className="fade-animation mb-5 text-sm text-gray-300">
@@ -43,22 +43,7 @@ function about() {
               />
             </div>
           </div>
-          <div className="min-w-[100%] md:min-w-min slide-left md:w-1/4 border-8 border-gray-300 rounded-sm">
-            {/* <div className="imageContainer">
-              <Image
-                className="image"
-                alt="Selfie of Mr Subash Chaudhary wearing jeans jacket at sangha."
-                src="/subash.jpg"
-                layout="fill"
-                // width={1920}
-                // height={1180}
-                objectFit="cover"
-                objectPosition="right"
-                quality={30}
-                // loads when page loads
-                loading="eager"
-              />
-            </div> */}
+          <div className="min-w-full md:min-w-min slide-left md:w-1/4 border-8 border-gray-300 rounded-sm">
             <div className="w-full h-full relative">
               <Image
                 alt="subash chaudhary"
@@ -80,13 +65,13 @@ function about() {
             <h1 className="text-3xl font-bold mb-2">
               I am more than a developer.
             </h1>
-            <p className="mb-12">
+            <p className="">
               Hi! My name is <b>Subash Chaudhary</b> and I am a front end web
               developer. I mainly use React for creating the app.
             </p>
           </div>
-          <div className="journey-desc-trigger-top overflow-hidden">
-            <h2 className="text-lg mb-2 font-semibold">
+          <div className="mt-12 journey-desc-trigger-top overflow-hidden">
+            <h2 className="text-lg mb-5 font-semibold">
               How my journey started?
             </h2>
             <p className="mb-5">

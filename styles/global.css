@@ -76,7 +76,7 @@ h1 {
     @apply bg-primaryDark;
     @apply text-gray-50;
     @apply selection:bg-primary;
-    @apply selection:text-gray-50;
+    @apply selection:text-black;
   }
 
   p {
@@ -116,8 +116,8 @@ h1 {
 
 /* Creating featured image in home page */
 .featured-image {
-  background: url(/star.png);
-  background-repeat: space space;
+  /* background: url(/star.png);
+  background-repeat: space space; */
   /* clip-path: circle(90.7% at 50% 0); */
   /* background-repeat: no-repeat;
   background-size: cover;

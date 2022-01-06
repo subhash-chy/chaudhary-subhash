@@ -31,16 +31,20 @@ const FeaturedPosts = ({ categories, slug }) => {
                 <a>
                   <div className="flex gap-x-2 items-center justify-items-start border-b py-3 hover:bgs-secondaryDark group">
                     <div className="flex-shrink-0 w-16 h-16">
-                      <Image
-                        className="rounded-sm"
-                        alt={post.title}
-                        src={post.featuredImage.url}
-                        height={200}
-                        width={200}
-                        objectFit="cover"
-                        quality={30}
-                        //   objectPosition="right"
-                      />
+                      {post.featuredImage?.url != null ? (
+                        <Image
+                          className="rounded-sm"
+                          alt={post.title}
+                          src={post.featuredImage.url}
+                          height={200}
+                          width={200}
+                          objectFit="cover"
+                          quality={30}
+                          //   objectPosition="right"
+                        />
+                      ) : (
+                        <div className="bg-secondaryDark w-full h-full"></div>
+                      )}
                     </div>
                     <div>
                       <p className="text-sm line-clamp-2 group-hover:text-gray-300">

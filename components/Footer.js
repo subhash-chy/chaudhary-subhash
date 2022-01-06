@@ -124,7 +124,10 @@ function Footer() {
       </div>
 
       <div className="text-sm text-gray-300 fade-animation-scroll">
-        <p>© Copyright 2021 Subash. All rights reserved.</p>
+        <p>
+          © Copyright 2021 SUBASH
+          <span className="text-primary text-xs">.c</span>. All rights reserved.
+        </p>
         <li>
           <Link href="/privacy-policy" className="cursor-pointer">
             Privacy Policy

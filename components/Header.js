@@ -28,7 +28,9 @@ function Header() {
     <div className="z-50 backdrop-blur-md sticky top-0 max-h-min px-5 py-2 md:flex items-center justify-between bg-secondaryDark/90 text-gray-100">
       <div className="max-h-min flex items-center justify-between opacity-100">
         <Link href="/">
-          <a className="font-bold text-xl">SUBASH</a>
+          <a className="font-bold text-xl">
+            SUBASH <span className="text-primary text-xs">.c</span>
+          </a>
         </Link>
 
         {/* <p className="">{router.pathname !== "/" && path}</p> */}

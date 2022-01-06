@@ -46,6 +46,7 @@ export default function Home() {
     );
 
     // Animating SVG card
+    //creating timeline
     let tl = gsap.timeline({
       defaults: {
         duration: 0.7,
@@ -69,6 +70,8 @@ export default function Home() {
       .from("#para-two", { scaleX: 0, transformOrigin: "left" }, "-=.4")
       .from("#btn-submit", { scale: 0 })
       .from("#btn-cancel", { scale: 0 }, "-=.6");
+    // Animating the whole card
+    gsap.to("#skewed-card", { y: 4, delay: 3.5, repeat: -1, yoyo: true });
   }, []);
 
   return (
@@ -84,15 +87,10 @@ export default function Home() {
 
       <Layout>
         <div className="overflow-hidden">
-          <div
-            // style={{
-            //   transform: `translateY(${offsetY * 0.55}px)`,
-            // }}
-            className="w-screen h-screen   bg-secondaryDark"
-          >
-            <div className="featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
-              <div className="featured-slide-collides-up h-min flex flex-col gap-10 text-left">
-                <h1 className="text-glow max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-700  intro">
+          <div className="w-screen  bg-secondaryDark">
+            <div className=" featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
+              <div className="featured-slide-collides-up h-min flex flex-col gap-x-10 gap-y-0 text-left">
+                <h1 className="text-glow max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50  intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
                 <p className="intro-desc text-lg">
@@ -105,8 +103,9 @@ export default function Home() {
                 {/* <div className="h-10 w-5 border-2 rounded-full flex items-center justify-center">
                   <div className="bounce-dot h-1 w-1 rounded-full bg-primary"></div>
                 </div> */}
-                <div className="w-full h-full ">
+                <div className=" w-[70ch] md:w-full h-full">
                   <svg
+                    className="mx-auto"
                     width="379"
                     height="402"
                     viewBox="0 0 529 552"
@@ -127,6 +126,7 @@ export default function Home() {
                         height="139"
                         transform="matrix(0.942641 0.333807 -0.332326 0.943165 147.783 0)"
                         fill={secondaryDark.secondaryDark}
+                        opacity="1"
                       />
                       <rect
                         id="title"
