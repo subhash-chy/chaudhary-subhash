@@ -116,7 +116,7 @@ function Footer() {
         <p className="font-semibold">Sell</p> */}
         {navLinks.map((navLink) => (
           <Link key={navLink.name} href={navLink.path}>
-            <p className="cursor-pointer hover:scale-105 duration-150">
+            <p className="cursor-pointer hover:text-gray-100 duration-150">
               {navLink.name}
             </p>
           </Link>

@@ -12,7 +12,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 //Importing colors
 const primary = require("../styles/constants");
 const primaryDark = require("../styles/constants");
-const secondaryDark = require("../styles/constants");
+const cardDark = require("../styles/constants");
 
 // import animations
 import { triggerXSlide, triggerYSlide } from "../styles/animations";
@@ -89,11 +89,11 @@ export default function Home() {
         <div className="overflow-hidden">
           <div className="w-screen  bg-secondaryDark">
             <div className=" featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
-              <div className="featured-slide-collides-up h-min flex flex-col gap-x-10 gap-y-0 text-left">
-                <h1 className="text-glow max-w-[70ch] text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50  intro">
+              <div className="featured-slide-collides-up h-min flex flex-col gap-y-10 text-left">
+                <h1 className="max-w-[70ch] text-5xl  text-primary intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
-                <p className="intro-desc text-lg">
+                <p className="intro-desc">
                   I am also a front-end developer with pretty good experience in
                   creating an eye catching and engaging UI.
                 </p>
@@ -125,8 +125,7 @@ export default function Home() {
                         width="404"
                         height="139"
                         transform="matrix(0.942641 0.333807 -0.332326 0.943165 147.783 0)"
-                        fill={secondaryDark.secondaryDark}
-                        opacity="1"
+                        fill={cardDark.cardDark}
                       />
                       <rect
                         id="title"

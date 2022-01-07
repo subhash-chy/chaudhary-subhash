@@ -76,7 +76,7 @@ h1 {
     @apply bg-primaryDark;
     @apply text-gray-50;
     @apply selection:bg-primary;
-    @apply selection:text-black;
+    @apply selection:text-gray-100;
   }
 
   p {

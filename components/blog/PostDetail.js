@@ -47,7 +47,7 @@ function PostDetail({ post }) {
               return (
                 <Link href={href} {...rest}>
                   <a
-                    className="text-primary/70"
+                    className="text-primary"
                     target={openInNewTab ? "_blank" : "_self"}
                     rel={rel || "noopener noreferrer"}
                   >

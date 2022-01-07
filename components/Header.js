@@ -60,7 +60,7 @@ function Header() {
       >
         {navLinks.map((navLink) => (
           <Link key={navLink.name} href={navLink.path}>
-            <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 hover:text-gray-200">
+            <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 hover:text-gray-100">
               {navLink.name}
             </p>
           </Link>
