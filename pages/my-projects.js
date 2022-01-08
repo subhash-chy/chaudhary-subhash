@@ -3,10 +3,10 @@ import Head from "next/head";
 import Xarrow from "react-xarrows";
 import TimelineItem from "../components/TimelineItem";
 import { timelineItems } from "../components/timeline-items/timelineItems";
-import { fadeAnimation, slideXAnimation } from "../styles/animations";
+import { fadeAnimation } from "../styles/animations";
 import { useEffect } from "react";
 
-// importing primary color from another js file
+// importing primary color from another js file (not ES6 style)
 const primary = require("../styles/constants");
 
 function myProjects() {
@@ -15,7 +15,7 @@ function myProjects() {
   //Animation section
   useEffect(() => {
     fadeAnimation(".fadeAnimation");
-  }, []);
+  });
 
   // creating an empty array of lines
   const lines = [];
@@ -28,10 +28,10 @@ function myProjects() {
       color: color,
       headSize: 0,
       strokeWidth: 2,
-      curveness: 0.8,
+      // curveness: 0.8, //default value
       startAnchor: "middle",
       endAnchor: "middle",
-      dashness: { animation: 0.4 },
+      dashness: { animation: 1 },
     });
   }
 

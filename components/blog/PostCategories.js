@@ -4,7 +4,7 @@ function PostCategories() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories));
-  }, [categories]);
+  }, []);
   return (
     <div>
       <h2 className="text-2xl font-bold mb-5">Tags & Catgories</h2>

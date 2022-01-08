@@ -101,31 +101,7 @@ h1 {
   }
 }
 
-/* Implementing bg pattern in my-projects page */
-/* .my-projects {
-  content: "";
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: url(/pattern1.png);
-  opacity: 0.75;
-  background-size: 6rem;
-  background-position: center;
-} */
-
-/* Creating featured image in home page */
-.featured-image {
-  /* background: url(/star.png);
-  background-repeat: space space; */
-  /* clip-path: circle(90.7% at 50% 0); */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-}
-
 /* Code Highlighter */
-
 pre code.hljs {
   display: block;
   overflow-x: auto;
@@ -133,13 +109,7 @@ pre code.hljs {
 }
 code.hljs {
   padding: 3px 5px;
-} /*!
-  Theme: a11y-dark
-  Author: @ericwbailey
-  Maintainer: @ericwbailey
-
-  Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css
-*/
+}
 
 .hljs-comment,
 .hljs-quote {

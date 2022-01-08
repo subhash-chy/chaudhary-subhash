@@ -1,10 +1,7 @@
-const primary = "#4416c4";
-// const primary = "#00299e";
-// const primary = "#00c943";
-
-const primaryDark = "#141d21";
-const secondaryDark = "#11181c";
-const cardDark = "#172126";
+const primary = "#0a84ff";
+const primaryDark = "#151515";
+const secondaryDark = "#121212 ";
+const cardDark = "#1D1D1D";
 
 module.exports = {
   primary,

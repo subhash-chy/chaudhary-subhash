@@ -90,7 +90,7 @@ export default function Home() {
           <div className="w-screen  bg-secondaryDark">
             <div className=" featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
               <div className="featured-slide-collides-up h-min flex flex-col gap-y-10 text-left">
-                <h1 className="max-w-[70ch] text-5xl  text-primary intro">
+                <h1 className="max-w-[70ch] text-6xl font-semibold text-primary intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
                 <p className="intro-desc">

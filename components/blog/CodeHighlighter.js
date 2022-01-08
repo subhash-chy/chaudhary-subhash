@@ -2,23 +2,25 @@ import { useState, useEffect } from "react";
 import hljs from "highlight.js";
 
 function CodeHighlighter({ codeString }) {
-  useEffect(() => {
-    hljs.initHighlightingOnLoad();
-  });
   const [isCopied, setIsCopied] = useState(false);
-
-  async function copyTextToClipboard(text) {
-    if ("clipboard" in navigator) {
-      return await navigator.clipboard.writeText(text);
-    } else {
-      return document.execCommand("copy", true, text);
-    }
-  }
+  // const codeRef = useRef();
 
   // onClick handler function for the copy button
+  const text = codeString.props.content[0].text;
+  // const pure = text.forEach(function (element) {
+  //   element.innerHTML = element.innerHTML
+  //     .replace(/&/g, "&amp;")
+  //     .replace(/</g, "&lt;")
+  //     .replace(/>/g, "&gt;")
+  //     .replace(/"/g, "&quot;")
+  //     .replace(/'/g, "&#039;");
+  // });
+  useEffect(() => {
+    hljs.highlightAll();
+  });
   const handleCopyClick = () => {
-    // Asynchronously call copyTextToClipboard
-    copyTextToClipboard(codeString)
+    navigator.clipboard
+      .writeText(text)
       .then(() => {
         // If successful, update the isCopied state value
         setIsCopied(true);
@@ -27,7 +29,7 @@ function CodeHighlighter({ codeString }) {
         }, 1500);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Error occured", err);
       });
   };
 

@@ -40,7 +40,7 @@ function privacyPolicy() {
         </div> */}
         <div className="mt-12 mx-5 md:mx-auto  px-5 max-w-[70ch]">
           <div className="fade-privacy">
-            <h1 className=" text-3xl  font-bold mb-4">
+            <h1 className=" text-3xl  font-semibold mb-12">
               Privacy Policy for using this site
             </h1>
 

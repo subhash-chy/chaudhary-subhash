@@ -1,28 +1,22 @@
 function TimelineItem({ title, description, index }) {
   return (
     <>
-      {/* Odd */}
-      {/* chng*/}
       <div
         className={`flex items-center mt-12 ${
           index % 2 ? "justify-end" : "md:text-right"
         }`}
       >
-        {/* {index % 2 ? console.log("2") : console.log("not 2")} */}
-        {/* chng */}
         <div
           className={`max-w-lg flex items-center justify-start  ${
             index % 2 ? "" : "md:flex-row-reverse"
           }`}
         >
           <div
-            // chng
             id={`${index + 1}`}
             className="shadow-glow  bg-primary  rounded-full w-8 h-8  min-w-[2rem]"
           ></div>
-          {/* chng */}
           <div
-            className={`flex items-center justify-start my-8 mx-8 flex-wrap ${
+            className={`flex items-center justify-start my-8 ml-8 md:mr-8 flex-wrap ${
               index % 2 ? "" : "md:flex-row-reverse"
             }`}
           >
@@ -31,7 +25,7 @@ function TimelineItem({ title, description, index }) {
               {index + 1}
             </p>
             <h3 className="text-primary text-3xl font-bold w-full">{title}</h3>
-            <p className="mt-5 max-w-[90%]">{description}</p>
+            <p className="mt-5 max-w-full md:max-w-[90%]">{description}</p>
           </div>
         </div>
       </div>

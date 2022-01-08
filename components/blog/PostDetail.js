@@ -5,8 +5,44 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
 
 function PostDetail({ post }) {
+  // Calculating post reading time
+  let content = [];
+  post.content.raw.children.map((item) => {
+    item.children.map((i) => {
+      content.push(i.text);
+    });
+  });
+  const readTime =
+    0.008 *
+    content
+      .toString()
+      .split(" ")
+      .filter((el) => {
+        return el.length;
+      }).length;
+
   return (
     <>
+      <div className="mb-5 flex gap-2 items-center">
+        <Image
+          src={post.author.photo.url}
+          height={30}
+          width={30}
+          objectFit="cover"
+          className="rounded-full"
+        />
+        <div className="flex gap-5">
+          <p>
+            <span className="text-primary">{post.author.author}</span>
+          </p>
+          <p>{moment(post.createdAt).format("MMM DD, YYYY")}</p>
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h1 className="text-3xl font-semibold mb-5">{post.title}</h1>
+        <p className="text-xs italic">{Math.floor(readTime)} min read ★</p>
+      </div>
       <div className="w-full mb-5">
         <div className="w-full h-full relative">
           {post.featuredImage?.url != null ? (
@@ -24,20 +60,6 @@ function PostDetail({ post }) {
           )}
         </div>
       </div>
-      <div className="mb-12 flex gap-5 items-center">
-        <Image
-          src={post.author.photo.url}
-          height={50}
-          width={50}
-          objectFit="cover"
-          className="rounded-full"
-        />
-        <div>
-          <h2 className="font-bold">{post.author.author}</h2>
-          <p>{moment(post.createdAt).format("DD MMM, YYYY")}</p>
-        </div>
-      </div>
-      <h1 className="text-2xl font-bold mb-5">{post.title}</h1>
 
       <RichText
         content={post.content.raw}

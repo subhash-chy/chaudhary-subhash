@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { getSimilarPosts, getRecentPosts } from "../../services/blog";
 import Link from "next/link";
+import moment from "moment";
 
 const FeaturedPosts = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -29,26 +29,13 @@ const FeaturedPosts = ({ categories, slug }) => {
             .map((post, index) => (
               <Link key={index} href={`/blog/${post.slug}`}>
                 <a>
-                  <div className="flex gap-x-2 items-center justify-items-start border-b py-3 hover:bgs-secondaryDark group">
-                    <div className="flex-shrink-0 w-16 h-16">
-                      {post.featuredImage?.url != null ? (
-                        <Image
-                          className="rounded-sm"
-                          alt={post.title}
-                          src={post.featuredImage.url}
-                          height={200}
-                          width={200}
-                          objectFit="cover"
-                          quality={30}
-                          //   objectPosition="right"
-                        />
-                      ) : (
-                        <div className="bg-secondaryDark w-full h-full"></div>
-                      )}
-                    </div>
+                  <div className="border-b border-primary/5 py-3 group">
                     <div>
-                      <p className="text-sm line-clamp-2 group-hover:text-gray-300">
+                      <p className="mb-2 group-hover:text-gray-300">
                         {post.title}
+                      </p>
+                      <p className="text-primary text-xs italic">
+                        {moment(post.createdAt).format("MMM DD, YYYY")}
                       </p>
                     </div>
                   </div>
