@@ -1,22 +1,13 @@
 import { useState, useEffect } from "react";
-import hljs from "highlight.js";
+import Prism from "prismjs";
 
 function CodeHighlighter({ codeString }) {
   const [isCopied, setIsCopied] = useState(false);
-  // const codeRef = useRef();
 
   // onClick handler function for the copy button
   const text = codeString.props.content[0].text;
-  // const pure = text.forEach(function (element) {
-  //   element.innerHTML = element.innerHTML
-  //     .replace(/&/g, "&amp;")
-  //     .replace(/</g, "&lt;")
-  //     .replace(/>/g, "&gt;")
-  //     .replace(/"/g, "&quot;")
-  //     .replace(/'/g, "&#039;");
-  // });
   useEffect(() => {
-    hljs.highlightAll();
+    Prism.highlightAll();
   });
   const handleCopyClick = () => {
     navigator.clipboard
@@ -42,7 +33,7 @@ function CodeHighlighter({ codeString }) {
         {isCopied ? "Copied!!" : "Copy"}
       </button>
       <pre className="w-full">
-        <code className="jsx">{codeString}</code>
+        <code className="language-javascript">{codeString}</code>
       </pre>
     </div>
   );

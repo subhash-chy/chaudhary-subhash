@@ -132,6 +132,37 @@ function PostDetail({ post }) {
               />
             </div>
           ),
+          class: ({ children, className }) => {
+            switch (className) {
+              case "primary":
+                return (
+                  <div className="bg-primary/5 text-primary px-3 pb-2 pt-4 flex items-center mb-0 note">
+                    <span>{children}</span>
+                  </div>
+                );
+              case "danger":
+                return (
+                  <div className="bg-red-500/5 text-red-500 px-3 pb-2 pt-4 flex items-center mb-0 note">
+                    <span>{children}</span>
+                  </div>
+                );
+              case "warning":
+                return (
+                  <div className="bg-yellow-500/5 text-yellow-500 px-3 pb-2 pt-4 flex items-center mb-0 note">
+                    <span>{children}</span>
+                  </div>
+                );
+              case "success":
+                return (
+                  <div className="bg-green-500/5 text-green-500 px-3 pb-2 pt-4 flex items-center mb-0 note">
+                    <span>{children}</span>
+                  </div>
+                );
+
+              default:
+                return <>{children}</>;
+            }
+          },
         }}
       />
     </>

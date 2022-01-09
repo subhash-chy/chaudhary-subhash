@@ -15,18 +15,20 @@ function blog({ posts }) {
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
           {/* New Posts */}
           <div className="md:col-span-9">
-            <h2 className="text-2xl font-bold mb-5">New posts</h2>
-            {
-              <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-5">
-                {posts.length === 0
-                  ? "There are currently no posts to show!"
-                  : posts
-                      .map((post, index) => (
-                        <PostCard key={index} post={post.node} />
-                      ))
-                      .reverse()}
-              </div>
-            }
+            <div className=" max-w-[70ch] mx-auto">
+              <h2 className="text-2xl font-bold mb-5">New posts</h2>
+              {
+                <div className="flex flex-wrap gap-5">
+                  {posts.length === 0
+                    ? "There are currently no posts to show!"
+                    : posts
+                        .map((post, index) => (
+                          <PostCard key={index} post={post.node} />
+                        ))
+                        .reverse()}
+                </div>
+              }
+            </div>
           </div>
 
           {/* Featured post */}
