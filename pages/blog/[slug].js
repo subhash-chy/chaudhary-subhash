@@ -4,12 +4,16 @@ import PostDetail from "../../components/blog/PostDetail";
 import Layout from "../../components/Layout";
 import { getPostDetails, getPosts } from "../../services/blog";
 import Head from "next/head";
+import Error404 from "../../components/Error404";
 
 function PostDetails({ post }) {
+  if (post == null) {
+    return <Error404 />;
+  }
   return (
     <>
       <Head>
-        <title>Blog - {post.title}</title>
+        <title>Blog - {post?.title}</title>
       </Head>
       <Layout>
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
@@ -24,8 +28,8 @@ function PostDetails({ post }) {
               <div className="mb-12">
                 <div className="mb-12">
                   <FeaturedPosts
-                    slug={post.slug}
-                    categories={post.categories.map(
+                    slug={post?.slug}
+                    categories={post?.categories.map(
                       (category) => category.slug
                     )}
                   />
@@ -58,6 +62,6 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: "blocking",
+    fallback: true,
   };
 }

@@ -1,3 +1,4 @@
+// Don't do ever slightest change in the file or it may throw error
 import { getPosts } from "../services/blog";
 
 const EXTERNAL_DATA_URL = "https://www.chaudharysubash.com.np/blog";
@@ -12,7 +13,7 @@ const createSitemap = (posts) => `
                     <loc>${`${EXTERNAL_DATA_URL}/${post.node.slug}`}</loc>
                     <lastmod>${post.node.updatedAt}</lastmod>
                     <changefreq>daily</changefreq>
-                    <priority>1</priority>
+                    <priority>0.9</priority>
                 </url>
             `;
           })

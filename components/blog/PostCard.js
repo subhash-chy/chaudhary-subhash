@@ -7,7 +7,7 @@ function PostCard({ post }) {
   const router = useRouter();
 
   return (
-    <div className="mb-5 bg-secondaryDark">
+    <div className="mb-5 bg-secondaryDark w-full">
       {post.featuredImage?.url != null ? (
         <Image
           className="mb-5"
