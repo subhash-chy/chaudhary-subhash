@@ -31,18 +31,18 @@ function PostCard({ post }) {
             width={30}
             objectFit="cover"
           />
-          <div>
-            <p className=" text-gray-300">{post.author.author}</p>
-          </div>
+          {/* <div className="flex gap-x-2 items-center justify-center bg-red-400"> */}
+          <p className=" text-gray-300">{post.author.author}</p>
+          <p className="mb-2">.</p>
+          <p className="text-primary text-sm italic">
+            {moment(post.createdAt).format("MMM DD, YYYY")}
+          </p>
+          {/* </div> */}
         </div>
         <h1 className="text-2xl font-semibold mb-5 line-clamp-3">
           {post.title}
         </h1>
         <p className="mb-5 line-clamp-3">{post.metaDescription}</p>
-
-        <p className="text-primary text-sm mb-5 italic">
-          {moment(post.createdAt).format("MMM DD, YYYY")}
-        </p>
 
         <Button
           onClick={() => router.push(`/blog/${post.slug}`)}
