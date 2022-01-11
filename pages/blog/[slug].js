@@ -5,9 +5,15 @@ import Layout from "../../components/Layout";
 import { getPostDetails, getPosts } from "../../services/blog";
 import Head from "next/head";
 import Error404 from "../../components/Error404";
+import { useRouter } from "next/router";
+import SkeletonLoader from "../../components/loaders/SkeletonLoader";
 
 function PostDetails({ post }) {
-  if (post == null) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <SkeletonLoader />;
+  }
+  if (!post) {
     return <Error404 />;
   }
   return (
