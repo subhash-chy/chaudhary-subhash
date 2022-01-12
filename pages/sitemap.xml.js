@@ -24,7 +24,7 @@ function sitemap() {
   return null;
 }
 
-export async function getStaticProps({ res }) {
+export async function getServerSideProps({ res }) {
   const posts = await getPosts();
   const sitemapXml = createSitemap(posts);
   if (res) {
