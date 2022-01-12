@@ -52,7 +52,7 @@ function blog({ posts }) {
 
 export default blog;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   return {
     props: {

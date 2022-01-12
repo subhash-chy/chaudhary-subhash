@@ -2,6 +2,7 @@ import moment from "moment";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Button from "../button/Button";
+import { IoIosTime } from "react-icons/io";
 
 function PostCard({ post }) {
   const router = useRouter();
@@ -35,7 +36,10 @@ function PostCard({ post }) {
           <p className=" text-gray-300">{post.author.author}</p>
           <p className="mb-2">.</p>
           <p className="text-primary text-sm italic">
-            {moment(post.createdAt).format("MMM DD, YYYY")}
+            <span className="flex items-center justify-center gap-x-1">
+              <IoIosTime className="w-3 h-3" />
+              {moment(post.createdAt).format("MMM DD, YYYY")}
+            </span>
           </p>
           {/* </div> */}
         </div>

@@ -56,7 +56,7 @@ function Header() {
       {/* {!showMenu && ( */}
       <div
         ref={navRef}
-        className="max-h-min slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-3 justify-end"
+        className="max-h-min slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-5 justify-end"
       >
         {navLinks.map((navLink) => (
           <Link key={navLink.name} href={navLink.path}>
