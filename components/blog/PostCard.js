@@ -13,12 +13,13 @@ function PostCard({ post }) {
         <Image
           className="mb-5"
           src={post.featuredImage.url}
+          alt={post.title}
           height={1080}
           width={1920}
           layout="responsive"
           objectFit="cover"
           quality={30}
-          priority={true}
+          // priority={true}
         />
       ) : (
         ""
@@ -27,6 +28,7 @@ function PostCard({ post }) {
         <div className="flex gap-x-2 items-center mb-5">
           <Image
             src={post.author.photo.url}
+            alt={post.author.author}
             className="rounded-full"
             height={30}
             width={30}

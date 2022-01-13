@@ -4,12 +4,24 @@ import { getPosts } from "../../services/blog";
 import PostCard from "../../components/blog/PostCard";
 import FeaturedPosts from "../../components/blog/FeaturedPosts";
 import PostCategories from "../../components/blog/PostCategories";
+import { useState, useEffect } from "react";
 
-function blog({ posts }) {
+function blog() {
+  const [allPosts, setAllPosts] = useState([]);
+  useEffect(() => {
+    getPosts().then((result) => {
+      setAllPosts(result);
+    });
+  }, []);
+
   return (
     <>
       <Head>
         <title>Blog - Subash</title>
+        <meta
+          name="description"
+          content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development."
+        />
       </Head>
       <Layout>
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
@@ -19,9 +31,9 @@ function blog({ posts }) {
               <h2 className="text-2xl font-bold mb-5">New posts</h2>
               {
                 <div className="flex flex-wrap gap-5">
-                  {posts.length === 0
-                    ? "There are currently no posts to show!"
-                    : posts
+                  {allPosts.length === 0
+                    ? " Loading....."
+                    : allPosts
                         .map((post, index) => (
                           <PostCard key={index} post={post.node} />
                         ))
@@ -51,12 +63,3 @@ function blog({ posts }) {
 }
 
 export default blog;
-
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return {
-    props: {
-      posts,
-    },
-  };
-}

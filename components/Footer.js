@@ -18,21 +18,21 @@ import {
 } from "../styles/animations";
 
 function Footer() {
-  useEffect(() => {
-    // Here, fs= footer social
-    triggerXSlide(".slide-fs-left");
-    triggerXSlide(".fh-right");
-    triggerXSlide(".fh-left");
-    fadeAnimation(".fade-animation-scroll");
+  // useEffect(() => {
+  //   // Here, fs= footer social
+  //   triggerXSlide(".slide-fs-left");
+  //   triggerXSlide(".fh-right");
+  //   triggerXSlide(".fh-left");
+  //   fadeAnimation(".fade-animation-scroll");
 
-    // Animating breadcrumbs
-    triggerXSlide(".breadcrumb-right");
+  //   // Animating breadcrumbs
+  //   triggerXSlide(".breadcrumb-right");
 
-    // y-direction
-    triggerYSlide(".f-slide-bottom ");
-    triggerYSlide(".f-slide-top");
-    triggerYSlide(".f-social-slide-bottom");
-  }, []);
+  //   // y-direction
+  //   triggerYSlide(".f-slide-bottom ");
+  //   triggerYSlide(".f-slide-top");
+  //   triggerYSlide(".f-social-slide-bottom");
+  // }, []);
   const router = useRouter();
 
   let link = router.pathname;
@@ -46,9 +46,11 @@ function Footer() {
       ) : (
         <nav className="w-full text-gray-400 text-xs">
           <ol className="flex items-center gap-x-2">
-            <Link href="/">
-              <a className="breadcrumb-right">Home</a>
-            </Link>
+            <li>
+              <Link href="/">
+                <a className="breadcrumb-right">Home</a>
+              </Link>
+            </li>
             <li>
               <BsChevronRight className="breadcrumb-right w-3 h-3" />
             </li>
@@ -86,6 +88,7 @@ function Footer() {
           href="https://www.facebook.com/SubashTharu.0/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
           <BsFacebook className="w-6 h-6 cursor-pointer duration-150 hover:text-[#4267B2]" />
         </a>
@@ -95,6 +98,7 @@ function Footer() {
           href="https://www.instagram.com/subash.002/?hl=en"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
           <BsInstagram className="w-6 h-6 cursor-pointer duration-150 hover:text-[#cd486b]" />
         </a>
@@ -104,6 +108,7 @@ function Footer() {
           href="https://github.com/Suubash"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Github"
         >
           <BsGithub className="w-6 h-6 cursor-pointer duration-150 hover:text-[#333333]" />
         </a>
@@ -128,11 +133,11 @@ function Footer() {
           © Copyright 2021 SUBASH
           <span className="text-primary text-xs">.c</span>. All rights reserved.
         </p>
-        <li>
+        <p className=" hover:text-gray-100">
           <Link href="/privacy-policy" className="cursor-pointer">
             Privacy Policy
           </Link>
-        </li>
+        </p>
       </div>
     </div>
   );

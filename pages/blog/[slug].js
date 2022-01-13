@@ -6,7 +6,7 @@ import { getPostDetails, getPosts } from "../../services/blog";
 import Head from "next/head";
 import Error404 from "../../components/Error404";
 import { useRouter } from "next/router";
-import SkeletonLoader from "../../components/loaders/SkeletonLoader";
+// import SkeletonLoader from "../../components/loaders/SkeletonLoader";
 
 function PostDetails({ post }) {
   const router = useRouter();
@@ -16,11 +16,19 @@ function PostDetails({ post }) {
   return (
     <>
       <Head>
-        <title>Blog - {post?.title}</title>
+        <title>{post?.title}</title>
+        <meta
+          name="description"
+          content={
+            !router.isFallback && !post?.slug
+              ? "Find the latest blogs on web-development at ChaudharySubash.com.np"
+              : `${post?.metaDescription}`
+          }
+        ></meta>
       </Head>
       <Layout>
         {router.isFallback ? (
-          <SkeletonLoader />
+          "Loading......"
         ) : (
           <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
             {/* New Posts */}

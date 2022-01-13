@@ -82,6 +82,10 @@ export default function Home() {
           name="google-site-verification"
           content=" V8plfmHs6tIBpKivorNTMKn-zQH6sknk8LdwAqsjjDU"
         />
+        <meta
+          name="description"
+          content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development using NextJS and ReactJS."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -202,7 +206,7 @@ export default function Home() {
                 <Image
                   className=""
                   src="/subash.jpg"
-                  alt="subash chaudhary"
+                  alt="chaudhary subash"
                   width={1920}
                   height={2080}
                   priority={true}

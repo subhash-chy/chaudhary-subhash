@@ -26,6 +26,7 @@ function PostDetail({ post }) {
       <div className="mb-5 flex gap-2 items-center">
         <Image
           src={post.author.photo.url}
+          alt={post.title}
           height={30}
           width={30}
           objectFit="cover"

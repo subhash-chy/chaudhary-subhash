@@ -3,7 +3,7 @@ function Button({ accent, title, onClick }) {
     <button
       onClick={onClick}
       className={`${
-        accent && "bg-primary shadow-2xl shadow-primary/50 text-gray-100"
+        accent && "bg-primary shadow-2xl shadow-primary/50 text-black"
       } z-10 px-3 py-2 rounded-sm hover:opacity-90 ${
         !accent && "bg-primary/10 text-primary"
       }`}
