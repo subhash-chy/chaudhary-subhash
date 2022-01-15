@@ -8,31 +8,8 @@ import Button from "./button/Button";
 import { navLinks } from "./navigation-links/navlinks";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
-
-// importing animation
-import {
-  fadeAnimation,
-  triggerXSlide,
-  triggerYSlide,
-} from "../styles/animations";
 
 function Footer() {
-  // useEffect(() => {
-  //   // Here, fs= footer social
-  //   triggerXSlide(".slide-fs-left");
-  //   triggerXSlide(".fh-right");
-  //   triggerXSlide(".fh-left");
-  //   fadeAnimation(".fade-animation-scroll");
-
-  //   // Animating breadcrumbs
-  //   triggerXSlide(".breadcrumb-right");
-
-  //   // y-direction
-  //   triggerYSlide(".f-slide-bottom ");
-  //   triggerYSlide(".f-slide-top");
-  //   triggerYSlide(".f-social-slide-bottom");
-  // }, []);
   const router = useRouter();
 
   let link = router.pathname;
@@ -41,9 +18,7 @@ function Footer() {
 
   return (
     <div className=" bg-secondaryDark text-gray-100 z-40 mt-20 py-12 px-5 w-full flex flex-col items-center text-center overflow-x-auto">
-      {path === "/" ? (
-        ""
-      ) : (
+      {path != "/" && (
         <nav className="w-full text-gray-400 text-xs">
           <ol className="flex items-center gap-x-2">
             <li>
@@ -70,10 +45,10 @@ function Footer() {
       </div>
 
       <div className="f-slide-top mb-12 trigger-left">
-        <p className="mb-5">Currently, the signup doesn't work!!</p>
+        <p className="mb-5">Currently, the signup doesn&apos;t work!!</p>
         <div className="mb-5 flex items-center justify-center gap-x-2">
           <input
-            type="text"
+            type="email"
             placeholder="Your email"
             className="p-2 focus:outline-none text-primaryDark"
           />
@@ -120,7 +95,7 @@ function Footer() {
         <p className="font-semibold">Contact</p>
         <p className="font-semibold">Sell</p> */}
         {navLinks.map((navLink) => (
-          <Link key={navLink.name} href={navLink.path}>
+          <Link key={navLink.name} href={navLink.path} passHref>
             <p className="cursor-pointer hover:text-gray-100 duration-150">
               {navLink.name}
             </p>

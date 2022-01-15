@@ -6,7 +6,7 @@ import FeaturedPosts from "../../components/blog/FeaturedPosts";
 import PostCategories from "../../components/blog/PostCategories";
 import { useState, useEffect } from "react";
 
-function blog() {
+function Blog() {
   const [allPosts, setAllPosts] = useState([]);
   useEffect(() => {
     getPosts().then((result) => {
@@ -31,13 +31,15 @@ function blog() {
               <h2 className="text-2xl font-bold mb-5">New posts</h2>
               {
                 <div className="flex flex-wrap gap-5">
-                  {allPosts.length === 0
-                    ? " Loading....."
-                    : allPosts
-                        .map((post, index) => (
-                          <PostCard key={index} post={post.node} />
-                        ))
-                        .reverse()}
+                  {allPosts.length === 0 ? (
+                    <div className="animate-spin h-10 w-10 rounded-full  border-x-2 border-b-2"></div>
+                  ) : (
+                    allPosts
+                      .map((post, index) => (
+                        <PostCard key={index} post={post.node} />
+                      ))
+                      .reverse()
+                  )}
                 </div>
               }
             </div>
@@ -62,4 +64,4 @@ function blog() {
   );
 }
 
-export default blog;
+export default Blog;

@@ -11,14 +11,14 @@ import {
   ySlide,
 } from "../styles/animations";
 
-function about() {
+function About() {
   useEffect(() => {
     fadeAnimation(".fade-animation");
     xSlide(".slide-left");
     ySlide(".slide-bottom");
     triggerYSlide(".journey-desc-trigger-top");
     triggerYSlide(".journey-scroll");
-  });
+  }, []);
   return (
     <>
       <Head>
@@ -88,11 +88,12 @@ function about() {
               frame if you got low end PCs.
             </p>
             <p className="mb-5">
-              The low end PC's couldn't run Blender smoothly. So I decided to
-              leave the Blender and started learning Mobile app development. I
-              used Flutter, a Google's UI toolkit, for making cross platform
-              apps. Well, days were running and I was happy with the Flutter but
-              not so satisfied. So I started to learn React.
+              The low end PC&apos;s couldn&apos;t run Blender smoothly. So I
+              decided to leave the Blender and started learning Mobile app
+              development. I used Flutter, a Google&apos;s UI toolkit, for
+              making cross platform apps. Well, days were running and I was
+              happy with the Flutter but not so satisfied. So I started to learn
+              React.
             </p>
             <p className="mb-5">
               After writing some react codes, I was so satisfied with the react.
@@ -105,4 +106,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

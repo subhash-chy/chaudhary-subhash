@@ -46,9 +46,10 @@ function PostDetail({ post }) {
       </div>
       <div className="w-full mb-5">
         <div className="w-full h-full relative">
-          {post.featuredImage?.url != null ? (
+          {post.featuredImage?.url != null && (
             <Image
               src={post.featuredImage.url}
+              alt={post.title}
               width={1920}
               height={1080}
               priority={true}
@@ -56,8 +57,6 @@ function PostDetail({ post }) {
               objectFit="cover"
               quality={30}
             />
-          ) : (
-            ""
           )}
         </div>
       </div>
@@ -112,7 +111,9 @@ function PostDetail({ post }) {
               <CodeHighlighter codeString={children} />
             </div>
           ),
-          // code: ({ children }) => <code className="my-20">{children}</code>,
+          code: ({ children }) => (
+            <code className="bg-codeDark px-1 text-gray-100">{children}</code>
+          ),
 
           blockquote: ({ children }) => (
             <p className="border-l-4 border-primary/50 pl-5 my-10">

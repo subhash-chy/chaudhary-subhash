@@ -9,7 +9,7 @@ import { useEffect } from "react";
 // importing primary color from another js file (not ES6 style)
 const primary = require("../styles/constants");
 
-function myProjects() {
+function MyProjects() {
   const color = primary.primary;
 
   //Animation section
@@ -70,13 +70,10 @@ function myProjects() {
               ))}
             </div>
           </div>
-          {/* <div className="mt-20 h-screen flex items-center justify-center bg-gray-900">
-            <p className="text-4xl font-bold">Minimalism is the key</p>
-          </div> */}
         </div>
       </Layout>
     </>
   );
 }
 
-export default myProjects;
+export default MyProjects;

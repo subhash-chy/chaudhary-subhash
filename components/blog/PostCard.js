@@ -9,7 +9,7 @@ function PostCard({ post }) {
 
   return (
     <div className="mb-5 bg-secondaryDark w-full">
-      {post.featuredImage?.url != null ? (
+      {post.featuredImage?.url != null && (
         <Image
           className="mb-5"
           src={post.featuredImage.url}
@@ -21,8 +21,6 @@ function PostCard({ post }) {
           quality={30}
           // priority={true}
         />
-      ) : (
-        ""
       )}
       <div className="p-4">
         <div className="flex gap-x-2 items-center mb-5">

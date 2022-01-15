@@ -13,7 +13,9 @@ function Error404() {
       </Head>
       <Layout>
         <div className="mt-12 mx-5 h-[70vh] max-w-[70ch] md:mx-auto flex flex-col gap-y-12 items-center justify-center">
-          <h1 className="text-4xl font-semibold">404 | Page doesn't exist</h1>
+          <h1 className="text-4xl font-semibold">
+            404 | Page doesn&apos;t exist
+          </h1>
           <svg
             width="150"
             height="127.18"

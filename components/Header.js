@@ -52,21 +52,18 @@ function Header() {
           </div>
         </div>
       </div>
-
-      {/* {!showMenu && ( */}
       <div
         ref={navRef}
         className="max-h-min slide-nav text-center hidden h-full md:flex flex-col md:flex-row gap-5 justify-end"
       >
         {navLinks.map((navLink) => (
-          <Link key={navLink.name} href={navLink.path}>
+          <Link key={navLink.name} href={navLink.path} passHref>
             <p className="py-3 md:py-0 font-bold md:font-normal w-full md:w-max cursor-pointer duration-150 hover:text-gray-100">
               {navLink.name}
             </p>
           </Link>
         ))}
       </div>
-      {/* )} */}
     </div>
   );
 }

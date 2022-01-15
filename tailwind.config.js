@@ -1,6 +1,8 @@
 const primary = require("./styles/constants");
 const primaryDark = require("./styles/constants");
 const secondaryDark = require("./styles/constants");
+const cardDark = require("./styles/constants");
+const codeDark = require("./styles/constants");
 // console.log(primary.primary);
 
 module.exports = {
@@ -16,6 +18,8 @@ module.exports = {
         primary: primary.primary,
         primaryDark: primaryDark.primaryDark,
         secondaryDark: secondaryDark.secondaryDark,
+        cardDark: cardDark.cardDark,
+        codeDark: codeDark.codeDark,
         // #1B262C
       },
       boxShadow: {

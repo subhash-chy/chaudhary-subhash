@@ -6,7 +6,7 @@ import { BsFacebook, BsInstagram, BsGithub } from "react-icons/bs";
 import { useEffect } from "react";
 import { triggerXSlide, fadeAnimation } from "../styles/animations";
 
-function contact() {
+function Contact() {
   useEffect(() => {
     triggerXSlide(".left");
     triggerXSlide(".right");
@@ -119,4 +119,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

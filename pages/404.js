@@ -1,7 +1,7 @@
 import Error404 from "../components/Error404";
 
-function error() {
+function Error() {
   return <Error404 />;
 }
 
-export default error;
+export default Error;
