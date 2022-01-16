@@ -85,6 +85,9 @@ h1 {
   div > p {
     @apply text-gray-400;
   }
+  ul > p {
+    @apply text-gray-400;
+  }
 
   /* if className is given from CMS */
   div.note {

@@ -36,15 +36,6 @@ export default function Home() {
     triggerYSlide(".slide-bottom");
     triggerYSlide(".featured-slide-collides-up");
 
-    // Creating a bounce animation
-    gsap.fromTo(
-      ".bounce-dot",
-      {
-        y: -10,
-      },
-      { y: 10, yoyo: true, repeat: -1 }
-    );
-
     // Animating SVG card
     //creating timeline
     let tl = gsap.timeline({
@@ -94,7 +85,7 @@ export default function Home() {
           <div className="w-screen  bg-secondaryDark">
             <div className=" featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
               <div className="featured-slide-collides-up h-min flex flex-col gap-y-10 text-left">
-                <h1 className="max-w-[70ch] text-6xl font-semibold text-primary intro">
+                <h1 className="max-w-[70ch] text-6xl font-semibold text-white intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
                 <p className="intro-desc">
@@ -104,9 +95,6 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center justify-center gap-y-5">
-                {/* <div className="h-10 w-5 border-2 rounded-full flex items-center justify-center">
-                  <div className="bounce-dot h-1 w-1 rounded-full bg-primary"></div>
-                </div> */}
                 <div className=" w-[70ch] md:w-full h-full">
                   <svg
                     className="mx-auto"
