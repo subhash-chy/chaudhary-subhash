@@ -3,7 +3,6 @@ import Prism from "prismjs";
 
 function CodeHighlighter({ codeString }) {
   const [isCopied, setIsCopied] = useState(false);
-
   // onClick handler function for the copy button
   const text = codeString.props.content[0].text;
   useEffect(() => {

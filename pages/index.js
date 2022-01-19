@@ -85,7 +85,7 @@ export default function Home() {
           <div className="w-screen  bg-secondaryDark">
             <div className=" featured-image  h-full justify-center items-center text-center flex flex-col md:flex-row gap-x-20 gap-y-10 p-10 md:p-20 text-gray-100">
               <div className="featured-slide-collides-up h-min flex flex-col gap-y-10 text-left">
-                <h1 className="max-w-[70ch] text-6xl font-semibold text-white intro">
+                <h1 className="max-w-[70ch] text-6xl font-semibold text-gray-300 intro">
                   Hi! I am Subash. A front-end developer.
                 </h1>
                 <p className="intro-desc">
@@ -183,9 +183,7 @@ export default function Home() {
             <h1 className="trigger-right text-2xl font-semibold mb-2 italic">
               Mr. Subash Chaudhary.
             </h1>
-            <p className="trigger-left">
-              Who is actually Mr. Subash Chaudhary?
-            </p>
+            <p className="trigger-left">Who am I?</p>
           </div>
 
           <div className="grid md:grid-cols-5 mx-5 gap-x-5 gap-y-2 overflow-hidden">
@@ -211,19 +209,22 @@ export default function Home() {
               </h1>
               <p className="mb-5 text-xs">(HTML, CSS, Javascript, React)</p>
               <p className=" mb-5">
-                Mr Subash Chaudhary is an awesome front-end developer who likes
-                to write &lt;/code&gt;. The <b>favourite</b> programming
-                language is Javascript (js). To create UI of an application, he
-                uses HTML, CSS, Javascript. On top, he uses `React` a library
-                created by Facebook. And on the top of React, he uses `Next.js`
-                for SEO kind of stuffs.
+                Hi! my name is Subash Chaudhary and I am a front-end developer.
+                I like to write &lt;/code&gt; in JavaScript. The <b>main</b>{" "}
+                programming language is Javascript (js). To create UI of an
+                application, I use HTML, CSS, Javascript. On top, I use{" "}
+                <b>NextJS</b> (a framework for <b>ReactJS</b>) for{" "}
+                <b>`SSG`, `SSR`, and `ISR`</b>
               </p>
               <p className="mb-5">
-                The above tools described are not only the known tools to him!
-                There are also some more tools that he knows. Some of them are
+                The above tools described are not only the known tools to me!
+                There are also some more tools that I know. Some of them are
                 Adobe XD, Figma, and Lunacy as a Prototyping tools, Blender as a
                 3D design tool, Photoshop as a photo editing tool, Adobe
                 illustrator as a vector drawing and illustration tool.
+              </p>
+              <p className="mb-5">
+                For more details, you can visit <b>`about`</b> page.
               </p>
               <Button
                 accent

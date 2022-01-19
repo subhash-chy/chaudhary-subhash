@@ -1,5 +1,5 @@
 import FeaturedPosts from "../../components/blog/FeaturedPosts";
-import PostCategories from "../../components/blog/PostCategories";
+// import PostCategories from "../../components/blog/PostCategories";
 import PostDetail from "../../components/blog/PostDetail";
 import Layout from "../../components/Layout";
 import { getPostDetails, getPosts } from "../../services/blog";
@@ -48,9 +48,9 @@ function PostDetails({ post }) {
                       )}
                     />
                   </div>
-                  <div className="mb-12">
+                  {/* <div className="mb-12">
                     <PostCategories />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -134,6 +134,7 @@ function PostDetail({ post }) {
                 layout="responsive"
                 objectFit="cover"
                 quality={30}
+                priority={true}
               />
             </div>
           ),

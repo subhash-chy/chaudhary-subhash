@@ -32,8 +32,8 @@ function About() {
               Hi! I am a <span>Developer</span>.
             </h1>
             <p className="fade-animation mb-5 text-sm text-gray-300">
-              Hey, I write Front-End codes, prototype a Figma design, write
-              backend codes, and even write some blogs.
+              I write Front-End codes, prototype a Figma design, write backend
+              codes, and even write some blogs.
             </p>
             <div className="fade-animation">
               <Button
@@ -66,8 +66,9 @@ function About() {
               I am more than a developer.
             </h1>
             <p className="">
-              Hi! My name is <b>Subash Chaudhary</b> and I am a front end web
-              developer. I mainly use React for creating the app.
+              Being developer is not only my skill, I also write blogs on the
+              different topics related to programming. You can read it in{" "}
+              <b>'blogs'</b> page.
             </p>
           </div>
           <div className="mt-12 journey-desc-trigger-top overflow-hidden">
@@ -75,29 +76,30 @@ function About() {
               How my journey started?
             </h2>
             <p className="mb-5">
-              It took very long time to be in the field of front end development
-              since I was learning how to code. Well, primarily, before coming
-              to programming, I was just trying to learn 3D design using
-              Blender. But you all know that, 3D design softwares take so much
-              resources in the machine, you can literally use it as a heater for
-              your room.
+              It took a long time for me to get into front end development
+              because I was still learning how to code. Before I got into
+              programming, I was primarily interested in learning 3D design with
+              Blender. However, you are all aware that 3D design softwares
+              consume so many resources in the machine that you could literally
+              use it as a heater in your room.
             </p>
             <p className="mb-5">
-              Learning <b>Blender</b> was very painful and time consuming task.
-              You literally just wait 2 - 3 minutes just to render a single
-              frame if you got low end PCs.
+              Learning <b>`Blender`</b> was a time-consuming and painful task.
+              If you have low-end PCs, you literally have to wait 2 - 3 minutes
+              to render a single frame.
             </p>
             <p className="mb-5">
-              The low end PC&apos;s couldn&apos;t run Blender smoothly. So I
-              decided to leave the Blender and started learning Mobile app
-              development. I used Flutter, a Google&apos;s UI toolkit, for
-              making cross platform apps. Well, days were running and I was
-              happy with the Flutter but not so satisfied. So I started to learn
-              React.
+              Blender couldn&apos;t run smoothly on complex scenes on low-end
+              PCs. So I dumped Blender and began learning mobile app
+              development. For creating cross-platform apps, I used Flutter, a
+              Google UI toolkit. Days passed, and I was pleased with the Flutter
+              but not completely satisfied. As a result, I began learning React.
             </p>
             <p className="mb-5">
-              After writing some react codes, I was so satisfied with the react.
-              It is so easy to learn basics of react.
+              I was very pleased with the react after writing some react codes.
+              Following my introduction to React, I began studying NextJS (a
+              React framework) for Static Site Generation (SSG), Server Side
+              Rendering (SSR), and Incremental Static Regeneration (ISR).
             </p>
           </div>
         </div>

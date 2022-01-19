@@ -1,7 +1,7 @@
 const primary = "#0a84ff";
-const primaryDark = "#151515";
+const primaryDark = "#171717";
 const secondaryDark = "#121212 ";
-const cardDark = "#1D1D1D";
+const cardDark = "#262626";
 const codeDark = "#353942";
 // #c9d2d9
 // 353942

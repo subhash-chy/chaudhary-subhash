@@ -14,4 +14,9 @@ export const timelineItems = [
     description:
       "This is the simplest app built by using Flutter. This app simply shows and plays different radio stations, mainly a song.",
   },
+  {
+    title: "Speech 2 Text",
+    description:
+      "This app simply writes text by just speaking into the microphone. (Under development)",
+  },
 ];

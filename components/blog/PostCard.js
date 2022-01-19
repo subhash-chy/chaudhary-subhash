@@ -23,17 +23,18 @@ function PostCard({ post }) {
         />
       )}
       <div className="p-4">
-        <div className="flex gap-x-2 items-center mb-5">
-          <Image
-            src={post.author.photo.url}
-            alt={post.author.author}
-            className="rounded-full"
-            height={30}
-            width={30}
-            objectFit="cover"
-          />
-          {/* <div className="flex gap-x-2 items-center justify-center bg-red-400"> */}
-          <p className=" text-gray-300">{post.author.author}</p>
+        <div className="flex flex-wrap gap-x-2 items-center mb-5">
+          <div className="flex items-center justify-center gap-x-2">
+            <Image
+              src={post.author.photo.url}
+              alt={post.author.author}
+              className="rounded-full"
+              height={30}
+              width={30}
+              objectFit="cover"
+            />
+            <p className=" text-gray-300">{post.author.author}</p>
+          </div>
           <p className="mb-2">.</p>
           <p className="text-primary text-sm italic">
             <span className="flex items-center justify-center gap-x-1">
@@ -41,7 +42,6 @@ function PostCard({ post }) {
               {moment(post.createdAt).format("MMM DD, YYYY")}
             </span>
           </p>
-          {/* </div> */}
         </div>
         <h1 className="text-2xl font-semibold mb-5 line-clamp-3">
           {post.title}

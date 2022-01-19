@@ -3,16 +3,16 @@ import Head from "next/head";
 import { getPosts } from "../../services/blog";
 import PostCard from "../../components/blog/PostCard";
 import FeaturedPosts from "../../components/blog/FeaturedPosts";
-import PostCategories from "../../components/blog/PostCategories";
-import { useState, useEffect } from "react";
+// import PostCategories from "../../components/blog/PostCategories";
+// import { useState, useEffect } from "react";
 
-function Blog() {
-  const [allPosts, setAllPosts] = useState([]);
-  useEffect(() => {
-    getPosts().then((result) => {
-      setAllPosts(result);
-    });
-  }, []);
+function Blog({ posts }) {
+  // const [posts, setposts] = useState([]);
+  // useEffect(() => {
+  //   getPosts().then((result) => {
+  //     setposts(result);
+  //   });
+  // }, []);
 
   return (
     <>
@@ -31,11 +31,11 @@ function Blog() {
               <h2 className="text-2xl font-bold mb-5">New posts</h2>
               {
                 <div className="flex flex-wrap gap-5">
-                  {allPosts.length === 0 ? (
-                    <div className="animate-spin h-10 w-10 rounded-full  border-x-2 border-b-2"></div>
+                  {posts?.length === 0 ? (
+                    <div>No posts to show</div>
                   ) : (
-                    allPosts
-                      .map((post, index) => (
+                    posts
+                      ?.map((post, index) => (
                         <PostCard key={index} post={post.node} />
                       ))
                       .reverse()
@@ -52,9 +52,9 @@ function Blog() {
                 <div className="mb-12">
                   <FeaturedPosts />
                 </div>
-                <div className="mb-12">
+                {/* <div className="mb-12">
                   <PostCategories />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -65,3 +65,12 @@ function Blog() {
 }
 
 export default Blog;
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return {
+    props: {
+      posts,
+    },
+  };
+}

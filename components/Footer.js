@@ -50,7 +50,7 @@ function Footer() {
           <input
             type="email"
             placeholder="Your email"
-            className="p-2 focus:outline-none text-primaryDark"
+            className="p-2 focus:outline-none  bg-cardDark"
           />
           <Button accent title="SIGN UP" />
         </div>
