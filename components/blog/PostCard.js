@@ -9,7 +9,7 @@ function PostCard({ post }) {
 
   return (
     <div className="mb-5 bg-secondaryDark w-full">
-      {post.featuredImage?.url != null && (
+      {post.featuredImage?.url != null && post.author && (
         <Image
           className="mb-5"
           src={post.featuredImage.url}
@@ -24,18 +24,22 @@ function PostCard({ post }) {
       )}
       <div className="p-4">
         <div className="flex flex-wrap gap-x-2 items-center mb-5">
-          <div className="flex items-center justify-center gap-x-2">
-            <Image
-              src={post.author.photo.url}
-              alt={post.author.author}
-              className="rounded-full"
-              height={30}
-              width={30}
-              objectFit="cover"
-            />
-            <p className=" text-gray-300">{post.author.author}</p>
-          </div>
-          <p className="mb-2">.</p>
+          {post.author && (
+            <>
+              <div className="flex items-center justify-center gap-x-2">
+                <Image
+                  src={post.author?.photo.url}
+                  alt={post.author?.author}
+                  className="rounded-full"
+                  height={30}
+                  width={30}
+                  objectFit="cover"
+                />
+                <p className=" text-gray-300">{post.author?.author}</p>
+              </div>
+              <p className="mb-2">.</p>
+            </>
+          )}
           <p className="text-primary text-sm italic">
             <span className="flex items-center justify-center gap-x-1">
               <IoIosTime className="w-3 h-3" />

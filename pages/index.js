@@ -8,6 +8,7 @@ import Button from "../components/button/Button";
 import { useRouter } from "next/router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 
 //Importing colors
 const primary = require("../styles/constants");
@@ -16,8 +17,9 @@ const cardDark = require("../styles/constants");
 
 // import animations
 import { triggerXSlide, triggerYSlide } from "../styles/animations";
+import { getRecentPosts } from "../services/blog";
 
-export default function Home() {
+export default function Home({ posts }) {
   const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
 
@@ -234,7 +236,37 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="mx-5 md:mx-auto mt-20 max-w-[70ch]">
+          <div className="flex items-center justify-between mb-5">
+            <h1 className="text-3xl">Read blogs</h1>
+            <Link href="/blog">
+              <a className="text-primary">{`All blogs >`}</a>
+            </Link>
+          </div>
+          <div className="mx-auto flex flex-col gap-5">
+            {posts
+              .map((post, i) => (
+                <Link href={`/blog/${post.slug}`} key={i}>
+                  <a className="bg-cardDark/50 md:flex justify-between p-5 cursor-pointer gap-5">
+                    <p> {post.title}</p>
+                    <p className="text-primary"> Read</p>
+                  </a>
+                </Link>
+                // <PostCard key={i} post={post} />
+              ))
+              .reverse()}
+          </div>
+        </div>
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (await getRecentPosts()) || [];
+  return {
+    props: {
+      posts,
+    },
+  };
 }

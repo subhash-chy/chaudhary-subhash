@@ -3,7 +3,7 @@ import Image from "next/image";
 import CodeHighlighter from "./CodeHighlighter";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
-import { FaCircle } from "react-icons/fa";
+// import { FaCircle } from "react-icons/fa";
 
 function PostDetail({ post }) {
   // Calculating post reading time

@@ -9,7 +9,7 @@ import { triggerXSlide, fadeAnimation } from "../styles/animations";
 function Contact() {
   useEffect(() => {
     triggerXSlide(".left");
-    triggerXSlide(".right");
+    // triggerXSlide(".right");
     triggerXSlide(".animateSocial");
     fadeAnimation(".fade-animation");
   }, []);
