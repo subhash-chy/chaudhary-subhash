@@ -3,6 +3,7 @@ import Image from "next/image";
 import CodeHighlighter from "./CodeHighlighter";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Link from "next/link";
+import Head from "next/head";
 // import { FaCircle } from "react-icons/fa";
 
 function PostDetail({ post }) {
@@ -24,6 +25,16 @@ function PostDetail({ post }) {
 
   return (
     <>
+      <Head>
+        <meta name="description" content={`${post?.metaDescription}`} />
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta
+          property="og:url"
+          content={`https://www.chaudharysubash.com.np/blog/${post.slug}`}
+        />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.metaDescription} />
+      </Head>
       <div className="mb-5 flex gap-2 items-center">
         <Image
           src={post.author.photo.url}
@@ -122,7 +133,7 @@ function PostDetail({ post }) {
             </p>
           ),
 
-          li: ({ children }) => <p className="mb-5">• {children}</p>,
+          li: ({ children }) => <li className="mb-5">• {children}</li>,
 
           img: ({ src, title, width, height, altText }) => (
             <div className="my-10">

@@ -17,14 +17,6 @@ function PostDetails({ post }) {
     <>
       <Head>
         <title>{post?.title}</title>
-        <meta
-          name="description"
-          content={
-            !router.isFallback && !post?.slug
-              ? "Find the latest blogs on web-development at ChaudharySubash.com.np"
-              : `${post?.metaDescription}`
-          }
-        ></meta>
       </Head>
       <Layout>
         {router.isFallback ? (

@@ -78,7 +78,7 @@ function About() {
             <p className="">
               Being developer is not only my skill, I also write blogs on the
               different topics related to programming. You can read it in{" "}
-              <b>'blogs'</b> page.
+              <b>&apos;blogs&apos;</b> page.
             </p>
           </div>
           <div className="mt-12 journey-desc-trigger-top overflow-hidden">
