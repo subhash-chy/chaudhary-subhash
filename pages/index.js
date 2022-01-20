@@ -79,6 +79,15 @@ export default function Home({ posts }) {
           name="description"
           content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development using NextJS and ReactJS."
         />
+
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta property="og:url" content="https://www.chaudharysubash.com.np" />
+        <meta property="og:title" content="Personal portfolio" />
+        <meta property="og:image" content="/subash.jpg" />
+        <meta
+          property="og:description"
+          content="I write Front-End codes, prototype a Figma design, write backend codes, and even write some blogs."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

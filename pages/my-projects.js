@@ -39,6 +39,16 @@ function MyProjects() {
     <>
       <Head>
         <title>My-projects - Subash</title>
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta
+          property="og:url"
+          content="https://www.chaudharysubash.com.np/my-projects"
+        />
+        <meta property="og:title" content="My Project Roadmap" />
+        <meta
+          property="og:description"
+          content="The following are the projects that I have created. The link to those projects will be available soon. Thanks for visiting my site."
+        />
       </Head>
       <Layout>
         <div className="my-projects">

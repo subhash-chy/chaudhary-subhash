@@ -17,6 +17,16 @@ function Contact() {
     <>
       <Head>
         <title>Contact - Subash</title>
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta
+          property="og:url"
+          content="https://www.chaudharysubash.com.np/contact"
+        />
+        <meta property="og:title" content="Contact me" />
+        <meta
+          property="og:description"
+          content="Note: Before sending any email, please be clear about what you want to communicate about and please do not try to spam the mail."
+        />
       </Head>
       <Layout>
         <div className="mt-12 mx-5 md:mx-auto max-w-[70ch]">

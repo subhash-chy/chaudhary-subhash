@@ -23,6 +23,16 @@ function About() {
     <>
       <Head>
         <title>About - Subash</title>
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta
+          property="og:url"
+          content="https://www.chaudharysubash.com.np/about"
+        />
+        <meta property="og:title" content="Hi! I am a Developer." />
+        <meta
+          property="og:description"
+          content="I write Front-End codes, prototype a Figma design, write backend codes, and even write some blogs."
+        />
       </Head>
       <Layout>
         <div className="px-5 py-12 md:py-0 bg-secondaryDark flex flex-col gap-5 items-center justify-evenly md:flex-row md:h-screen">

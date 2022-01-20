@@ -22,6 +22,16 @@ function Blog({ posts }) {
           name="description"
           content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development."
         />
+        <meta property="og:site_name" content="Chaudhary Subash" />
+        <meta
+          property="og:url"
+          content="https://www.chaudharysubash.com.np/blog"
+        />
+        <meta property="og:title" content="Want to read dangerous blogs?" />
+        <meta
+          property="og:description"
+          content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development."
+        />
       </Head>
       <Layout>
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
