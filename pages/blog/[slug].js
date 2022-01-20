@@ -15,9 +15,6 @@ function PostDetails({ post }) {
   }
   return (
     <>
-      <Head>
-        <title>{post?.title}</title>
-      </Head>
       <Layout>
         {router.isFallback ? (
           "Loading......"

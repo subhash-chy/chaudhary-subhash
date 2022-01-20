@@ -29,6 +29,7 @@ function PrivacyPolicy() {
     <>
       <Head>
         <title>Privacy-policy - Subash</title>
+        <meta name="robots" content="noindex,nofollow"></meta>
       </Head>
       <Layout>
         <div className="mt-12 mx-5 md:mx-auto  px-5 max-w-[70ch]">

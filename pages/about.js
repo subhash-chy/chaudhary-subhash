@@ -23,6 +23,7 @@ function About() {
     <>
       <Head>
         <title>About - Subash</title>
+        <meta name="robots" content="noindex,nofollow" />
         <meta property="og:site_name" content="Chaudhary Subash" />
         <meta
           property="og:url"

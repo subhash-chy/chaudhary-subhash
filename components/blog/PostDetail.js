@@ -26,6 +26,7 @@ function PostDetail({ post }) {
   return (
     <>
       <Head>
+        <title>{post.title}</title>
         <meta name="description" content={`${post?.metaDescription}`} />
         <meta property="og:site_name" content="Chaudhary Subash" />
         <meta

@@ -72,10 +72,6 @@ export default function Home({ posts }) {
       <Head>
         <title>Subash</title>
         <meta
-          name="google-site-verification"
-          content=" V8plfmHs6tIBpKivorNTMKn-zQH6sknk8LdwAqsjjDU"
-        />
-        <meta
           name="description"
           content="Want to know advanced topics on Front-end development? You are in the right place. You can find different blogs covering advanced topics on front-end development using NextJS and ReactJS."
         />

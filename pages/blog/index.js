@@ -3,17 +3,8 @@ import Head from "next/head";
 import { getPosts } from "../../services/blog";
 import PostCard from "../../components/blog/PostCard";
 import FeaturedPosts from "../../components/blog/FeaturedPosts";
-// import PostCategories from "../../components/blog/PostCategories";
-// import { useState, useEffect } from "react";
 
 function Blog({ posts }) {
-  // const [posts, setposts] = useState([]);
-  // useEffect(() => {
-  //   getPosts().then((result) => {
-  //     setposts(result);
-  //   });
-  // }, []);
-
   return (
     <>
       <Head>
