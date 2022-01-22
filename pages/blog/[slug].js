@@ -19,7 +19,7 @@ function PostDetails({ post }) {
         {/* {router.isFallback ? (
           "Loading......"
         ) : */}
-        (
+
         <div className="grid gap-5 md:grid-cols-12 mt-12 mx-5">
           {/* New Posts */}
           <div className="md:max-w-[70ch] md:mx-auto md:col-span-9 md:px-5 overflow-hidden">
@@ -45,7 +45,6 @@ function PostDetails({ post }) {
             </div>
           </div>
         </div>
-        ){/* } */}
       </Layout>
     </>
   );
