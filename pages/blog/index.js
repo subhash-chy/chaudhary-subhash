@@ -36,7 +36,7 @@ function Blog({ posts }) {
                   {posts?.length === 0 ? (
                     // <div>No posts to show</div>
                     <a
-                      className="bg-primary text-black p-3 rounded-md hover:opacity-80 w-full flex items-center justify-center"
+                      className="bg-primary  p-3 rounded-md hover:opacity-80 w-full flex items-center justify-center"
                       href="https://www.chaudharysubash.com.np/blog"
                       target="_blank"
                       rel="noopener noreferrer"
