@@ -6,17 +6,17 @@ import moment from "moment";
 const FeaturedPosts = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
-  useEffect(() => {
-    if (slug) {
-      getSimilarPosts(categories, slug).then((result) => {
-        setRelatedPosts(result);
-      });
-    } else {
-      getRecentPosts().then((result) => {
-        setRelatedPosts(result);
-      });
-    }
-  }, [slug]);
+  // useEffect(() => {
+  //   if (slug) {
+  //     getSimilarPosts(categories, slug).then((result) => {
+  //       setRelatedPosts(result);
+  //     });
+  //   } else {
+  //     getRecentPosts().then((result) => {
+  //       setRelatedPosts(result);
+  //     });
+  //   }
+  // }, [slug]);
 
   return (
     <>

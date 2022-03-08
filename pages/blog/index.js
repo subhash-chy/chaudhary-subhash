@@ -3,6 +3,7 @@ import Head from "next/head";
 import { getPosts } from "../../services/blog";
 import PostCard from "../../components/blog/PostCard";
 import FeaturedPosts from "../../components/blog/FeaturedPosts";
+import Link from "next/link";
 
 function Blog({ posts }) {
   return (
@@ -33,7 +34,15 @@ function Blog({ posts }) {
               {
                 <div className="flex flex-wrap gap-5">
                   {posts?.length === 0 ? (
-                    <div>No posts to show</div>
+                    // <div>No posts to show</div>
+                    <a
+                      className="bg-primary text-black p-3 rounded-md hover:opacity-80 w-full flex items-center justify-center"
+                      href="https://www.chaudharysubash.com.np/blog"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      All Blog Posts Moved Here!
+                    </a>
                   ) : (
                     posts
                       ?.map((post, index) => (
@@ -68,7 +77,7 @@ function Blog({ posts }) {
 export default Blog;
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = [];
   return {
     props: {
       posts,

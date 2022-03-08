@@ -31,7 +31,7 @@ function MyProjects() {
       // curveness: 0.8, //default value
       startAnchor: "middle",
       endAnchor: "middle",
-      dashness: { animation: 1 },
+      dashness: { strokeLen: 40, nonStrokeLen: 20, animation: 0.3 },
     });
   }
 

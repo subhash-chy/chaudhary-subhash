@@ -19,7 +19,7 @@ const cardDark = require("../styles/constants");
 import { triggerXSlide, triggerYSlide } from "../styles/animations";
 import { getRecentPosts } from "../services/blog";
 
-export default function Home({ posts }) {
+export default function Home() {
   const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
 
@@ -241,7 +241,7 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <div className="mx-5 md:mx-auto mt-20 max-w-[70ch]">
+        {/* <div className="mx-5 md:mx-auto mt-20 max-w-[70ch]">
           <div className="flex items-center justify-between mb-5">
             <h1 className="text-3xl">Read blogs</h1>
             <Link href="/blog">
@@ -261,17 +261,17 @@ export default function Home({ posts }) {
               ))
               .reverse()}
           </div>
-        </div>
+        </div> */}
       </Layout>
     </>
   );
 }
 
-export async function getStaticProps() {
-  const posts = (await getRecentPosts()) || [];
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const posts = (await getRecentPosts()) || [];
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
